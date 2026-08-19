@@ -3,6 +3,8 @@
 **A Socratic story-development skill for novels, screenplays, scenes, and series outlines.**  
 Instead of jumping to a verdict, it runs a loop of competing diagnoses, falsification, counterfactual tests, minimal intervention, and blind re-check to find the highest-leverage problem first.
 
+**New here? [Try the 3-minute first test →](./FIRST-TEST.md)**
+
 ## Install
 
 Install the skill with the cross-agent Skills CLI:
@@ -65,6 +67,7 @@ Author: **Solopup.co**
 
 ## Documentation
 
+- [3-minute first test](./FIRST-TEST.md)
 - [Benchmark](./BENCHMARK.md)
 - [English](./README.en.md)
 - [中文](./README.zh.md)
