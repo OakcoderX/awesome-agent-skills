@@ -1,109 +1,148 @@
 # Socratic Story Cartographer
 
-**English first, Chinese follows.**
+## English Documentation
 
-A creator-first prompt skill for first-pass narrative diagnosis of fiction.
-Its goal is to locate the highest-leverage storytelling breakpoints first, rather than giving instant yes/no verdicts.
+### Overview
 
-面向创作者的一套叙事诊断 Skill，用于小说、剧本、场景与多集大纲的第一轮判断。核心目标是先找出最能改变故事方向的问题点，而不是立刻给“合格/不合格”结论。
+A creator-oriented narrative diagnostic skill that uses Socratic questioning to support first-pass reading of fiction.
+It is designed for novels, screenplays, scenes, and multi-episode outlines.
 
-## Origin / 来历
+The goal is not to give a final verdict, but to identify the highest-leverage story issues and the next correction that can be tried first.
 
-This version was inspired by Feifei Li’s observation that Socratic questioning can make uncertainty shrink faster than giving direct answers: by testing assumptions, fiction can be evaluated with lower ambiguity and clearer intervention priorities.
+### Origin
 
-我做这个版本的起点，是李飞飞关于苏格拉底式提问的启发：先问对问题、再做反例验证，往往比先下结论更能快速降低不确定性，找到更真实的修改优先级。
+The concept was inspired by Li Feifei’s point that Socratic questioning, when used early, can reduce uncertainty faster than immediate assertions.
 
-I also used it in my own writing practice, and used it for early passes on novels and screenplays.
+I also used this approach in my own writing workflow and applied it to first-pass reviews of novels and scripts.
 
-我也在自己的小说/剧本工作里使用过，作为初审的判断框架。
+### What this version improves
 
-## What this version improves / 本版优化点
+- Automatic input type classification: Novel / Screenplay / Outline / Scene / Mixed / Unclear.
+- Story-facing output language: goals, obstacles, choices, stakes, causality, and consequences.
+- Fixed loop for fast diagnosis and re-checking.
+- Clear handoff summary for producers and writers: what changed, what remains, what to fix next.
 
-- Input-aware diagnosis: automatically classifies input as **novel / screenplay / outline / scene / mixed / unclear** before analysis.
-- Story-driven output: outputs are written in scene/goals/conflict/consequence language, not engineering terms.
-- Structured loops: each diagnosis uses a compact Socratic loop and supports parallel interpretation checks.
-- Producer-grade summary: identifies root causes, risks, and modification priorities for planning.
+### Loop structure (default 3 loops)
 
-- 增加输入自判定：先判断是**小说/剧本/大纲/片段/混合/不确定**。
-- 输出改为叙事语言（目标、阻碍、选择、代价、后果）而非术语化断言。
-- 固定结构化循环：每次诊断都围绕一套可复用的苏格拉底链条。
-- 提供可执行摘要，便于制片/编剧快速定任务顺序。
+Each loop follows:
 
-## Core principle / 核心原则
+1. Observe
+2. Generate 2–3 competing interpretations
+3. Test the strongest interpretation with:
+   - one falsification test
+   - one counterfactual test
+4. Choose the leverage point (root-cause first)
+5. Suggest interventions
+   - minimal option
+   - optional alternative
+6. Predict consequences
+7. Ask at most 1–2 key questions when needed
+8. Blind re-check and update belief
 
-- It is a partner, not an oracle.
-- Every conclusion is provisional and can be revised.
-- The priority is leverage: fix causes first, polish second.
+### Output shape
 
-- 这不是裁判，而是陪你一起找问题的搭档。
-- 每轮结论都可被反驳并更新。
-- 优先修根因，边际修饰在后。
+Each loop outputs:
 
-## Scope / 适用范围
-
-- Novel / 小说
-- Screenplay / 剧本
-- Outline / 大纲
-- Scene / 场景片段
-
-Used for first-pass editorial positioning and producer-readable diagnostic summaries.
-
-用于初审定位，不替代完整版改稿。
-
-## What the skill returns / 输出是什么
-
-Per loop (normally 3 rounds total):
-
-- **Current belief / 当前判断**
-- **Competing interpretations / 竞争解释**
-- **Evidence tests / 证据测试**
-- **Leverage point / 根因杠杆**
-- **Intervention options / 调整建议（小修 + 备选方向）**
-- **Expected impact / 预期影响**
-- **Regression risk / 回归风险**
-- **Open questions / 未闭合问题**
+- Current belief
+- Competing diagnosis
+- Test design
+- Leverage point
+- Intervention suggestion(s)
+- Expected consequence
+- Regression check
+- Open uncertainty
+- Optional author questions (if needed)
 
 Final pass includes:
 
-- Story focus after this round / 这轮后故事重点
-- What changed / 已确认问题与修正方向
-- Remaining risks / 剩余风险
-- What to change next / 下一步最值得改的点
-- Continue / stop recommendation / 继续或暂停建议
+- What the story is currently centered on
+- What was changed and why
+- Remaining risks
+- Top 3 follow-up fixes (priority order)
+- Continue / stop recommendation
 
-每轮一般输出 1 组以上判断框架，不给技术化评分，不给绝对绿灯。
+### Scope and constraints
 
-## Question policy / 提问规则
+- No guarantee of acceptance labels (no “greenlight/reject” verdicts).
+- No replacement for human legal, rights, or production decisions.
+- No full rewrite mode.
+- No invention of missing facts, motivations, or plot events.
 
-Ask at most 2 high-value questions only when answers would materially change the chosen intervention.
-Do not use interview-style checklists.
+### Suggested skill name
 
-最多在答案会改变决策时才提 1–2 个关键问题；不做低价值采访式追问。
+**Socratic Story Cartographer**  
+Repository name: `socratic-story-cartographer`
 
-## Boundaries / 边界
+---
 
-- Not a guaranteed acceptance detector.
-- Not a replacement for legal/rights/compliance checks.
-- Not a full rewrite workflow.
+## 中文文档
 
-- 不做“是否一定播出/通过”式断言。
-- 不替代版权、合规、人审判断。
-- 不替代完整重写。
+### 概览
 
-## Recommended structure in this repository / 推荐文件结构
+一个面向创作者的叙事诊断 skill，用苏格拉底式提问支持小说、剧本、片段和多集大纲的初审。
 
-- `README.md` (this file)
-- `SKILL.md` (execution policy)
-- `references/` (optional: mode notes / example traces)
+目标不是直接下“通过/不通过”结论，而是先找出最有杠杆作用的问题点，并定位最值得先改的方向。
 
-## Suggested skill name / 建议技能名
+### 来历
 
-### English
+该版本受李飞飞“提问先于答案”这一思路启发：先通过有约束的提问降低不确定性，再做判断，通常比直接给结论更稳。
+
+我在自己的创作流程中也在用，并用于小说与剧本的初步评估。
+
+### 本版强化
+
+- 输入自动分类：小说 / 剧本 / 大纲 / 场景 / 混合 / 不确定。
+- 输出使用叙事语言：人物目标、阻碍、选择、代价、因果、后果。
+- 固定化诊断循环，支持快速迭代复测。
+- 产出可用于制片会的结论摘要：已确认问题、未闭合问题、下一步优先修复项。
+
+### 诊断循环（默认3轮）
+
+每轮执行：
+
+1. 观察
+2. 提出2–3个竞争解释
+3. 用两个测试验证当前最强解释：
+   - 一次可证伪测试
+   - 一次反事实测试
+4. 选一个根因杠杆
+5. 给修正方案
+   - 小修优先方案
+   - 可选替代方向
+6. 预估后果
+7. 仅在关键时提出1–2个高价值问题
+8. 盲测后更新判断
+
+### 输出内容
+
+每轮固定返回：
+
+- 当前判断
+- 竞争解释
+- 测试设计
+- 根因杠杆点
+- 方案建议
+- 预期影响
+- 回归风险
+- 未闭合疑点
+- 可选作者提问（仅在有实质影响时）
+
+最终补充：
+
+- 这轮故事的核心结论
+- 做了什么变化、为什么这样做
+- 剩余风险
+- 下一步Top3修复优先级
+- 继续/暂停建议
+
+### 边界
+
+- 不输出“绿灯/不绿灯”这类绝对判定。
+- 不替代版权、法律、合规、制作流程决策。
+- 不做完整重写流程。
+- 不臆造未写明的人物信息、动机和剧情细节。
+
+### 技能名
+
 **Socratic Story Cartographer**
-
-### Identifier
-`socratic-story-cartographer`
-
-## Notes / 附注
-
-This directory should contain the updated executable instructions in `SKILL.md`.
+仓库名：`socratic-story-cartographer`
