@@ -76,6 +76,32 @@ Final pass includes:
 - Top 3 follow-up fixes (priority order)
 - Continue / stop recommendation
 
+## What to include in one request
+
+For best results, include three things:
+
+1) The text to evaluate (one novel chapter, one scene, one episode, or one outline block)
+2) Your goal (`first-pass`, `benchmark`, `minimum intervention`, `series triage`)
+3) Boundaries (`no rewrite`, `minimal edits only`, or `structure can change`)
+
+If objective and boundaries are not given, the skill infers them, but explicit constraints improve stability.
+
+## Example prompts
+
+- `Run 3 loops on this series outline and give me the highest-leverage production risk first.`
+- `Diagnose this screenplay scene only. Do not rewrite yet. Just locate what a minimal next edit should target.`
+- `Use benchmark mode and tell me whether this novel chapter reaches serious submission-level quality for [target].`
+
+Typical output always stays practical:
+
+- current belief
+- evidence anchors
+- competing diagnosis
+- leverage point
+- minimal intervention + alternatives
+- expected gain / possible loss
+- open uncertainty and next question (if needed)
+
 ## Scope and constraints
 
 - No guarantee of acceptance labels (no “greenlight/reject” verdicts).
