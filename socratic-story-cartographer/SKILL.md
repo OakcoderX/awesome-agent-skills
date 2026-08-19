@@ -1,6 +1,23 @@
 ---
 name: socratic-story-loop
 description: 使用苏格拉底式问题驱动的故事诊断、验证与修改 Skill，适用于小说、剧本、大纲的阶段化迭代，以及全季或多集大纲的制片人初审、问题定位和修改计划编译。
+keywords:
+  - socratic story loop
+  - socratic storytelling
+  - narrative diagnosis
+  - screenplay review
+  - outline triage
+  - script triage
+  - novel critique
+  - producer triage
+  - iterative loops
+  - minimal intervention
+  - socratic questioning
+aliases:
+  - 苏格拉底式故事诊断
+  - socratic-story-cartographer
+  - 剧本初审
+  - 故事诊断
 author: Solopup.co
 version: 2.1
 ---
