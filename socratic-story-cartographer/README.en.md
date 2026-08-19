@@ -10,6 +10,20 @@ Author: Solopup.co
 
 The goal is not to give a final verdict, but to identify the highest-leverage story issues and the next correction that can be tried first.
 
+## Discoverability
+
+### Search keywords
+
+**Primary tags:** Socratic questioning, narrative diagnosis, screenplay evaluation, outline triage, novel diagnosis, script readiness, root-cause intervention, 3-loop review, blind re-check.
+
+### Retrieval phrases for AI or search
+
+- `Socratic Story Loop`
+- `story triage for novel`
+- `screenplay production review`
+- `how to diagnose a TV series outline`
+- `3-loop socratic analysis`
+
 ## Origin
 
 The concept was inspired by Li Feifei’s point that Socratic questioning, when used early, can reduce uncertainty faster than immediate assertions.
