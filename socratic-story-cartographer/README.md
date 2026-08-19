@@ -17,6 +17,14 @@ Then give your agent the story material and ask, for example:
 Run Socratic Story Cartographer on this story for 3 loops. Find the highest-leverage issue first, test competing explanations, and do not rewrite until the diagnosis survives falsification and counterfactual checks.
 ```
 
+## Why this skill is different
+
+Most story-analysis skills can list strengths and weaknesses. This one is designed to **attack its own first diagnosis before recommending a fix** and to stop when another loop no longer changes the working belief.
+
+Version 2.1 was shaped by a structured 27-condition comparison across literary fiction, a 26-episode series outline, and an episode screenplay. The benchmark is published with its limitations rather than presented as an independent statistical trial.
+
+**[Read the benchmark and methodology →](./BENCHMARK.md)**
+
 ## What it is good at
 
 - **Novel / short fiction:** distinguish author intent from what the text actually produces; protect ambiguity, voice, restraint, and residue while finding the smallest useful revision.
@@ -57,6 +65,7 @@ Author: **Solopup.co**
 
 ## Documentation
 
+- [Benchmark](./BENCHMARK.md)
 - [English](./README.en.md)
 - [中文](./README.zh.md)
 - [Runtime specification](./SKILL.md)
