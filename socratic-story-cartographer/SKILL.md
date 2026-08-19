@@ -18,6 +18,19 @@ aliases:
   - socratic-story-cartographer
   - 剧本初审
   - 故事诊断
+  - 叙事诊断
+tags:
+  - socratic story loop
+  - socratic storytelling
+  - narrative diagnosis
+  - screenplay review
+  - script triage
+  - outline triage
+  - novel critique
+  - producer triage
+  - story loop
+  - minimal intervention
+  - scene diagnosis
 author: Solopup.co
 version: 2.1
 ---
