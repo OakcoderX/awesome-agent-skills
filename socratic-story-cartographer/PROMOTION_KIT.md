@@ -155,7 +155,21 @@ Repo：
 
 ---
 
-## 7. r/WritingWithAI — creator-first
+## 7. X / Twitter — short launch post
+
+AI story feedback has a failure mode I kept hitting: once the model makes a plausible first diagnosis, later turns often just optimize around it.
+
+So I built Socratic Story Cartographer: competing diagnoses → falsification → counterfactual → minimum-sufficient revision → blind re-check. If the belief does not change, the loop stops.
+
+Install:
+`npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer`
+
+Benchmark + repo:
+`https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer`
+
+---
+
+## 8. r/WritingWithAI — creator-first
 
 **Title**
 `I wanted AI to challenge its own editing advice, so I turned that into a reusable story skill`
@@ -175,7 +189,7 @@ Repo / 3-minute test:
 
 ---
 
-## 8. 即刻 / 中文短帖
+## 9. 即刻 / 中文短帖
 
 给 AI 装了一个“会反驳自己的故事编辑”。
 
@@ -188,7 +202,7 @@ Repo 里把 benchmark 和局限也公开了。想找真正拿自己文本来跑�
 
 ---
 
-## 9. 知乎 / 长文章定位
+## 10. 知乎 / 长文章定位
 
 **建议标题**
 `为什么我不再问 AI“这篇小说写得好吗”，而是让它先反驳自己的判断`
@@ -205,8 +219,27 @@ Repo 里把 benchmark 和局限也公开了。想找真正拿自己文本来跑�
 
 ---
 
+## 11. LinkedIn — professional / production framing
+
+I’ve been experimenting with a question that matters more to me than “can AI write a story?”: **can AI diagnose a story without becoming trapped by its first plausible explanation?**
+
+I turned that workflow into an open Agent Skill, Socratic Story Cartographer. It keeps competing diagnoses alive, requires evidence anchors, attacks the leading diagnosis with falsification and counterfactual tests, predicts regression risk, and stops when another loop no longer changes the working belief.
+
+I tested the specification on literary fiction, a 26-episode series outline, and an episode screenplay. The comparison is not presented as a statistical benchmark — the methodology and limitations are public so other creators and producers can reproduce it on their own material.
+
+Install:
+`npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer`
+
+Repo / methodology:
+`https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer`
+
+I’m looking for real failure cases, especially from writers, editors and producers already using AI in development rather than just generation.
+
+---
+
 ## Channels intentionally not used
 
 - r/writing — current rules prohibit generative-AI promotion/use.
 - r/selfpublish — current rules prohibit AI posts and restrict self-promotion.
+- r/Writers — possible, but lower priority because it is broad and self-promotion-sensitive.
 - Multiple near-identical Reddit posts in a short period — avoid spam and learn from one audience before posting to the next.
