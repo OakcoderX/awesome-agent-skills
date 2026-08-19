@@ -1,151 +1,62 @@
 # Socratic Story Cartographer
 
-**Version:** 2.1  
-**Author:** Solopup.co
+**A Socratic story-development skill for novels, screenplays, scenes, and series outlines.**  
+Instead of jumping to a verdict, it runs a loop of competing diagnoses, falsification, counterfactual tests, minimal intervention, and blind re-check to find the highest-leverage problem first.
 
-## About this skill
+## Install
 
-Socratic Story Cartographer is a story-diagnosis skill for creators and production teams.
+Install the skill with the cross-agent Skills CLI:
 
-It supports:
+```bash
+npx skills add https://github.com/OakcoderX/awesome-agent-skills --skill socratic-story-loop
+```
 
-- Novels
-- Screenplays
-- Multi-episode outlines
-- Scenes and story concepts
+Then give your agent the story material and ask, for example:
 
-Its goal is to help you find what matters first, avoid endless edits, and get to the next useful revision faster.
+```text
+Run Socratic Story Cartographer on this story for 3 loops. Find the highest-leverage issue first, test competing explanations, and do not rewrite until the diagnosis survives falsification and counterfactual checks.
+```
 
-## Discoverability (for humans & AI)
+## What it is good at
 
-### Search keywords
+- **Novel / short fiction:** distinguish author intent from what the text actually produces; protect ambiguity, voice, restraint, and residue while finding the smallest useful revision.
+- **Screenplay / episode:** diagnose protagonist choice, scene engine, causality, information release, state change, and where the series engine actually starts.
+- **Series outline / treatment:** test story-engine causality, escalation, competing explanations, phase transitions, and whether a structural rewrite is still necessary.
+- **Benchmark mode:** after diagnosis, compare a work against a target level without pretending editorial or commercial acceptance can be predicted precisely.
 
-**Main keywords:** Socratic storytelling, story diagnosis, screenplay evaluation, script triage, outline review, novel critique, producer-ready script, root-cause fix, 3-loop review, blind re-check, minimal intervention.
+## The loop
 
-### AI-search invocation phrases
+`Observe → Compete → Attack → Locate → Intervene → Re-test → Update`
 
-- `Socratic Story Loop, diagnose this outline for producer readiness.`
-- `Run 3 loops on this screenplay and propose the first high-leverage fix.`
-- `Use Socratic Story Loop for a benchmark check on this novel draft.`
-- `苏格拉底式 剧本 诊断`
-- `多集大纲 初审 根因 修复`
+Default: **3 loops**. A requested loop count is a maximum, not an obligation: if a new loop produces no belief update or better intervention, the skill stops early.
 
-## Origin
+Every root-level diagnosis must be anchored to concrete textual evidence. Important changes are checked for regression so that solving one problem does not accidentally destroy a stronger quality already working in the story.
 
-The concept is inspired by Li Feifei’s view that good prompting is not about giving answers quickly, but about asking the right questions early.
+## Quick prompts
 
-I built this skill from that idea to support first-pass diagnostics of fiction and scripts. It works as a small review partner: keep asking until the highest-leverage uncertainty is narrowed, then make the smallest useful intervention.
+**Novel**
+```text
+Run 3 loops on this short story. Separate author intent from text reality and find the single issue most likely to limit its ceiling. Preserve ambiguity and restraint.
+```
 
-## What this version improves
+**Screenplay**
+```text
+Run 3 loops on this episode. Find the most causally upstream problem before suggesting edits. Test whether protagonist choices actually create the next problem.
+```
 
-- Input type classification: Novel / Screenplay / Outline / Scene / Character / Mixed / Unclear.
-- Clear separation of **author intent** and **text reality**.
-- Evidence-first diagnosis with test/反例/反事实 checks.
-- A stronger loop structure for blind re-check and belief update.
-- A compact result format that points to the most important next fix.
+**Series outline**
+```text
+Run 3 loops on this season outline. Identify the story engine, attack your diagnosis with falsification and counterfactual tests, then tell me whether to stop, locally revise, or structurally rebuild.
+```
 
-## Core flow
+## Version
 
-A complete pass follows the default `Observe -> Compete -> Attack -> Locate -> Intervene -> Re-test -> Update` cycle.
+**2.1** — adds mandatory Evidence Anchors and Loop Delta checks to reduce unsupported diagnosis drift and repetitive loops.
 
-The default is 3 loops, but can be adjusted by user request.
-
-## How to use
-
-### 1) First-pass / triage
-
-Paste the text and tell me the goal.
-
-Example prompt:
-
-- `Run 3 loops and diagnose this outline for producer readiness.`
-- `I need a quick first-pass on this novel. Do 3 loops and tell me the highest-leverage uncertainty and next fix.`
-
-### 2) Scene/episode check
-
-Paste one scene or chapter and ask for the leverage point.
-
-Example prompt:
-
-- `Run 3 loops on this scene and tell me the minimal next fix.`
-- `Run 3 loops on this pilot scene only; judge whether the exit state has changed and what should be fixed first.`
-
-### 3) Risk-only check
-
-If you only need a stop/no-stop judgment, ask for benchmark mode questions.
-
-Example prompt:
-
-- `Do this in benchmark mode and compare it to [target].`
-
-### 4) What I should include in one ask
-
-To get good results, include:
-
-- The text itself (one outline / one scene / one episode / one chapter).
-- Your current goal:
-  - `初审` / `给制片人看`
-  - `找根因`
-  - `确认最小化修改方向`
-  - `评估是否值得继续改写`
-- Allowed scope:
-  - `先不改文`（只要问题定位）
-  - `可做最小修改`（只做最小干预）
-  - `可结构性重做`（允许较大改法）
-
-### 5) When to ask fewer questions
-
-The skill only asks for extra information when answers materially change the decision path.  
-
-For example:
-
-- You did not specify whether this is `小说` 还是 `剧本` and the difference affects judging criteria.
-- A missing world/genre rule changes causality.
-- A protection rule (`不改这个底色/不要失去悬念`) is unclear.
-
-If the text is already enough, it will not ask for extra clarification.
-
-## Before / after example
-
-Use this prompt template to keep the process stable:
-
-1. `Object: <novel|screenplay|outline|scene>`  
-2. `Goal: <first-pass|benchmark|minimum-edit|full triage>`  
-3. `Loops: 3`  
-4. `Scope: <text>  （paste here）`  
-5. `Restrictions: <if any>`
-
-Then paste your text.
-
-### Typical output shape
-
-You will receive:
-
-- Current belief
-- Evidence-backed diagnosis
-- Competing hypotheses
-- Testing logic (falsification + counterfactual)
-- Leverage point
-- Minimal fix + fallback option
-- Consequence prediction and regression risk
-- Open uncertainty
-- Decision recommendation
-
-It stays in story language (goal, obstacle, choice, cost, consequence), not abstract grading labels.
-
-## Output language
-
-The output is practical, avoiding abstract grading labels, and focuses on:
-
-- what the story currently does,
-- what changed in our judgment,
-- what likely has the highest downstream value,
-- what to fix next.
+Author: **Solopup.co**
 
 ## Documentation
 
-- [README.en.md (English)](./README.en.md)
-- [README.zh.md (中文)](./README.zh.md)
-- [SKILL.md (runtime spec)](./SKILL.md)
-
-Use the English or Chinese version according to your reading preference.
+- [English](./README.en.md)
+- [中文](./README.zh.md)
+- [Runtime specification](./SKILL.md)
