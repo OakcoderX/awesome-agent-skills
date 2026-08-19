@@ -59,6 +59,7 @@ Paste the text and tell me the goal.
 Example prompt:
 
 - `Run 3 loops and diagnose this outline for producer readiness.`
+- `I need a quick first-pass on this novel. Do 3 loops and tell me the highest-leverage uncertainty and next fix.`
 
 ### 2) Scene/episode check
 
@@ -67,6 +68,7 @@ Paste one scene or chapter and ask for the leverage point.
 Example prompt:
 
 - `Run 3 loops on this scene and tell me the minimal next fix.`
+- `Run 3 loops on this pilot scene only; judge whether the exit state has changed and what should be fixed first.`
 
 ### 3) Risk-only check
 
@@ -75,6 +77,61 @@ If you only need a stop/no-stop judgment, ask for benchmark mode questions.
 Example prompt:
 
 - `Do this in benchmark mode and compare it to [target].`
+
+### 4) What I should include in one ask
+
+To get good results, include:
+
+- The text itself (one outline / one scene / one episode / one chapter).
+- Your current goal:
+  - `初审` / `给制片人看`
+  - `找根因`
+  - `确认最小化修改方向`
+  - `评估是否值得继续改写`
+- Allowed scope:
+  - `先不改文`（只要问题定位）
+  - `可做最小修改`（只做最小干预）
+  - `可结构性重做`（允许较大改法）
+
+### 5) When to ask fewer questions
+
+The skill only asks for extra information when answers materially change the decision path.  
+
+For example:
+
+- You did not specify whether this is `小说` 还是 `剧本` and the difference affects judging criteria.
+- A missing world/genre rule changes causality.
+- A protection rule (`不改这个底色/不要失去槺�` ) is unclear.
+
+If the text is already enough, it will not ask for extra clarification.
+
+## Before / after example
+
+Use this prompt template to keep the process stable:
+
+1. `Object: <novel|screenplay|outline|scene>`  
+2. `Goal: <first-pass|benchmark|minimum-edit|full triage>`  
+3. `Loops: 3`  
+4. `Scope: <text>  （paste here）`  
+5. `Restrictions: <if any>`
+
+Then paste your text.
+
+### Typical output shape
+
+You will receive:
+
+- Current belief
+- Evidence-backed diagnosis
+- Competing hypotheses
+- Testing logic (falsification + counterfactual)
+- Leverage point
+- Minimal fix + fallback option
+- Consequence prediction and regression risk
+- Open uncertainty
+- Decision recommendation
+
+It stays in story language (goal, obstacle, choice, cost, consequence), not abstract grading labels.
 
 ## Output language
 
