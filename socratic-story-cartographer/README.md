@@ -8,7 +8,7 @@ Instead of jumping to a verdict, it runs a loop of competing diagnoses, falsific
 Install the skill with the cross-agent Skills CLI:
 
 ```bash
-npx skills add https://github.com/OakcoderX/awesome-agent-skills --skill socratic-story-loop
+npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer
 ```
 
 Then give your agent the story material and ask, for example:
