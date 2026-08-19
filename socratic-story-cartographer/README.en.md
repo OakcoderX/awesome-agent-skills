@@ -5,6 +5,9 @@
 A creator-oriented narrative diagnostic skill that uses Socratic questioning to support first-pass reading of fiction.
 It is designed for novels, screenplays, scenes, and multi-episode outlines.
 
+Version: 2.1
+Author: Solopup.co
+
 The goal is not to give a final verdict, but to identify the highest-leverage story issues and the next correction that can be tried first.
 
 ## Origin
@@ -70,3 +73,9 @@ Final pass includes:
 
 **Socratic Story Cartographer**  
 Repository name: `socratic-story-cartographer`
+
+Use this skill when you want:
+
+- fast first-pass reading
+- precise producer triage
+- smallest useful intervention suggestions
