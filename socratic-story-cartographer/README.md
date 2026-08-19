@@ -101,7 +101,7 @@ For example:
 
 - You did not specify whether this is `小说` 还是 `剧本` and the difference affects judging criteria.
 - A missing world/genre rule changes causality.
-- A protection rule (`不改这个底色/不要失去槺�` ) is unclear.
+- A protection rule (`不改这个底色/不要失去悬念`) is unclear.
 
 If the text is already enough, it will not ask for extra clarification.
 
