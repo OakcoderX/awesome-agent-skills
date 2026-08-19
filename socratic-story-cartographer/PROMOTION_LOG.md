@@ -6,18 +6,18 @@ This file is the working record for distribution experiments. The goal is not ma
 
 ## Distribution strategy
 
-Target: 14 channels in three waves.
+Target: **15 channels in three waves**. Do not publish the identical article everywhere. Registries get structured metadata, developer communities get methodology/benchmark framing, and creator communities get the editing problem + first-test framing.
 
 ### Wave A — Agent / Skill discovery (highest intent)
 
 | Channel | Why it matters | Action owner | Status | Result / next signal |
 |---|---|---|---|---|
 | skills.sh | Cross-agent install ecosystem; real installs create discovery/leaderboard signals | Automatic after real user installs | READY | No public listing signal yet; acquire first real installs |
-| SkillsMP | Large GitHub-indexed Agent Skill marketplace | Automatic crawl / monitor | READY | Exact-name search not yet surfaced; wait for re-crawl after metadata normalization |
-| dmgrok Agent Skills Directory | Quality/security-validated directory with provider submissions | User must submit GitHub issue; current GitHub App has read-only access there | PREPARED | Submission body prepared in PROMOTION_KIT.md |
-| Claude Skills Directory (skillsdir.dev) | Explicit community submission flow; accepts SKILL.md + links | User: GitHub issue or `skill publish` login | PREPARED | Submit after first external validation |
-| SkillsDirectory.com | Large scanned skills catalog with GitHub-authenticated submission | User: GitHub sign-in/form | PREPARED | Submit after first external validation |
-| SkillHub | Writing category + publish flow; supports uploaded SKILL.md/ZIP | User: account/upload | PREPARED | Submit after first external validation |
+| SkillsMP | Very large GitHub-indexed Agent Skill marketplace | Automatic crawl / monitor | READY | Exact-name search not yet surfaced; wait for re-crawl after metadata normalization |
+| dmgrok Agent Skills Directory | Quality/security-validated directory with provider submissions | User must submit GitHub issue; current GitHub App has read-only access there | PREPARED | Submission body prepared in `PROMOTION_KIT.md` |
+| Claude Skills Directory (skillsdir.dev) | Explicit community submission flow; accepts SKILL.md + links | User: GitHub issue or `skill publish` login | PREPARED | Submission metadata prepared |
+| SkillsDirectory.com | Large scanned skills catalog with GitHub-authenticated submission | User: GitHub sign-in/form | PREPARED | Submission metadata prepared |
+| SkillHub | Writing category + publish flow; supports uploaded SKILL.md/ZIP | User: account/upload | PREPARED | Submission metadata prepared |
 
 ### Wave B — AI / developer communities
 
@@ -27,22 +27,40 @@ Target: 14 channels in three waves.
 | r/ClaudeCode | Large harness audience; benchmark/eval framing fits | User | PREPARED | Lead with self-falsifying diagnosis + benchmark, not creative-writing pitch |
 | V2EX | Chinese Claude Code / Codex / Agent Skill builders are active | User | PREPARED | Chinese technical post; installation command near top |
 | Hacker News Show HN | Good fit for open-source AI tooling with technical methodology | User | PREPARED | Use benchmark and design rationale; avoid marketing copy |
+| X / Twitter | Fastest place to test the one-line value proposition among Agent builders | User | PREPARED | Short post + install command + benchmark link; one launch post, not a thread spam campaign |
 
-### Wave C — creators who actually need the skill
+### Wave C — creators / professional users
 
 | Channel | Why it matters | Action owner | Status | Notes |
 |---|---|---|---|---|
-| r/WritingWithAI | Large community explicitly discussing AI as editor/co-writer | User | PREPARED | Ask for real manuscripts/tests, not stars |
-| r/Writers | Allows resources but warns against spam | User | OPTIONAL | Frame as request for critique / first-test, not repeated promotion |
+| r/WritingWithAI | Community explicitly discussing AI as editor/co-writer | User | PREPARED | Ask for real manuscripts/tests, not stars |
 | 即刻 | Chinese AI + creative-professional overlap | User | PREPARED | Short Chinese post + personal origin + 3-minute test |
-| 知乎 | Best home for the longer article explaining Socratic prompting + benchmark | User | PREPARED | Publish full reasoning article; link repo at end |
+| 知乎 | Best home for the long-form article explaining Socratic prompting + benchmark | User | PREPARED | Publish full reasoning article; link repo at end |
+| LinkedIn | Professional AI/content-production audience; good for methodology and open-source positioning | User | PREPARED | Use producer/workflow framing rather than “AI writes stories” framing |
 
 ## Explicit exclusions
 
 - r/writing: do not post. Its current rules prohibit generative-AI advocacy/content.
 - r/selfpublish: do not post. Current rules prohibit AI posts and restrict self-promotion.
+- r/Writers: deprioritized. It permits resources but is broad and self-promotion-sensitive; lower expected conversion than WritingWithAI.
 - Repeated cross-posts to adjacent Reddit communities in the same day: avoid.
 - VoltAgent/awesome-agent-skills upstream PR: defer. Their contribution rules require real community usage for new community skills.
+
+## What can be automated here vs. what requires the user
+
+### Assistant can execute directly
+
+- Update the public GitHub skill files and documentation in `OakcoderX/awesome-agent-skills`.
+- Maintain this promotion log and channel-specific copy kit.
+- Monitor public search/indexing signals for skills.sh, SkillsMP, SkillHub and other directories.
+- Prepare exact metadata, issue bodies, titles, install commands and community-specific drafts.
+- Attempt connector-backed GitHub writes when the connected GitHub App has write permission.
+
+### User action currently required
+
+- Third-party GitHub issues/PRs where the installed GitHub App has read-only access.
+- Websites requiring GitHub/user sign-in or form submission (SkillsDirectory.com, SkillHub, etc.).
+- Reddit, Hacker News, V2EX, X, 即刻, 知乎 and LinkedIn posting because no authenticated connector for those accounts is available in this runtime.
 
 ## Actions already completed
 
@@ -62,7 +80,10 @@ Target: 14 channels in three waves.
 - Result: GitHub App returned 403 because the current connection has read-only access to that third-party repository.
 - Conclusion: own-repo GitHub writes can be automated; arbitrary third-party GitHub submissions require user-level GitHub authorization not currently available in this runtime.
 - Verified that an independent repository is not necessary for adoption: successful Agent Skill ecosystems often use monorepos.
-- Updated belief: highest-value sequence is standards compliance → real installs → quality-directory submissions → wider social promotion.
+- Verified current registry landscape and removed low-fit/spam-sensitive communities from the launch plan.
+- Created `PROMOTION_KIT.md` with registry metadata and platform-specific drafts.
+- Created this persistent `PROMOTION_LOG.md` to record all subsequent promotion experiments.
+- Updated belief: highest-value sequence is standards compliance → real installs → quality-directory submissions → developer communities → creator communities.
 
 ## Success metrics
 
