@@ -16,6 +16,20 @@ It supports:
 
 Its goal is to help you find what matters first, avoid endless edits, and get to the next useful revision faster.
 
+## Discoverability (for humans & AI)
+
+### Search keywords
+
+**Main keywords:** Socratic storytelling, story diagnosis, screenplay evaluation, script triage, outline review, novel critique, producer-ready script, root-cause fix, 3-loop review, blind re-check, minimal intervention.
+
+### AI-search invocation phrases
+
+- `Socratic Story Loop, diagnose this outline for producer readiness.`
+- `Run 3 loops on this screenplay and propose the first high-leverage fix.`
+- `Use Socratic Story Loop for a benchmark check on this novel draft.`
+- `苏格拉底式 剧本 诊断`
+- `多集大纲 初审 根因 修复`
+
 ## Origin
 
 The concept is inspired by Li Feifei’s view that good prompting is not about giving answers quickly, but about asking the right questions early.
@@ -26,7 +40,7 @@ I built this skill from that idea to support first-pass diagnostics of fiction a
 
 - Input type classification: Novel / Screenplay / Outline / Scene / Character / Mixed / Unclear.
 - Clear separation of **author intent** and **text reality**.
-- Evidence-first diagnosis with test/反事实 checks.
+- Evidence-first diagnosis with test/反例/反事实 checks.
 - A stronger loop structure for blind re-check and belief update.
 - A compact result format that points to the most important next fix.
 
