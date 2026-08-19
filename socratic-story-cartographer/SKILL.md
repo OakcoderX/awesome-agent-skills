@@ -1,43 +1,15 @@
 ---
-name: socratic-story-loop
-description: 使用苏格拉底式问题驱动的故事诊断、验证与修改 Skill，适用于小说、剧本、大纲的阶段化迭代，以及全季或多集大纲的制片人初审、问题定位和修改计划编译。
-keywords:
-  - socratic story loop
-  - socratic storytelling
-  - narrative diagnosis
-  - screenplay review
-  - outline triage
-  - script triage
-  - novel critique
-  - producer triage
-  - iterative loops
-  - minimal intervention
-  - socratic questioning
-aliases:
-  - 苏格拉底式故事诊断
-  - socratic-story-cartographer
-  - 剧本初审
-  - 故事诊断
-  - 叙事诊断
-tags:
-  - socratic story loop
-  - socratic storytelling
-  - narrative diagnosis
-  - screenplay review
-  - script triage
-  - outline triage
-  - novel critique
-  - producer triage
-  - story loop
-  - minimal intervention
-  - scene diagnosis
-author: Solopup.co
-version: 2.1
+name: socratic-story-cartographer
+description: Diagnose and iteratively improve novels, screenplays, scenes, characters, and story outlines using competing hypotheses, falsification, counterfactual tests, evidence anchors, minimum-sufficient intervention, blind re-check, and loop-delta stopping. Use for story diagnosis, screenplay review, outline triage, novel critique, story-engine analysis, producer review, or multi-loop revision.
+license: MIT
+compatibility: Portable Agent Skill; no external runtime or network access required.
+metadata:
+  author: Solopup.co
+  version: "2.1"
 ---
 
-# Socratic Story Loop
+# Socratic Story Cartographer
 
-Written by: Solopup.co
 Version: 2.1
 
 ## 0. Identity
@@ -476,6 +448,8 @@ If a loop produces:
 
 then **stop early**.
 
+Do not continue merely to satisfy the requested loop count.
+
 A requested loop count is a maximum, not an obligation to manufacture new conclusions.
 
 ---
@@ -491,6 +465,8 @@ At the end of each loop, update:
 - remaining uncertainty
 - next highest-leverage question
 - loop delta
+
+The next loop must respond to the new state.
 
 Do not repeat the same diagnostic checklist.
 
