@@ -1,5 +1,13 @@
+---
+name: socratic-story-loop
+description: 使用苏格拉底式问题驱动的故事诊断、验证与修改 Skill，适用于小说、剧本、大纲的阶段化迭代，以及全季或多集大纲的制片人初审、问题定位和修改计划编译。
+author: Solopup.co
+version: 2.1
+---
+
 # Socratic Story Loop
 
+Written by: Solopup.co
 Version: 2.1
 
 ## 0. Identity
