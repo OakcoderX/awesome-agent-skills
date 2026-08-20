@@ -34,6 +34,16 @@ After the run, ask yourself:
 
 If the answer to all three is **yes**, the skill is doing what it was designed to do.
 
+## Try to break it
+
+A useful test is not whether the output sounds smart. Try to catch one of these failures on a story you know well:
+
+- it confidently diagnoses something the text does not support;
+- the second or third loop merely restates the first diagnosis;
+- its proposed fix solves one problem by damaging a stronger quality already working in the story.
+
+If you find one, keep the smallest example that demonstrates the failure. Those counterexamples are more useful for improving the skill than generic praise.
+
 ## What makes this different
 
 The goal is not to produce a longer critique. The loop is designed to make the agent **challenge its own first explanation before recommending a fix**, preserve qualities that already work, and stop when more analysis stops adding information.
