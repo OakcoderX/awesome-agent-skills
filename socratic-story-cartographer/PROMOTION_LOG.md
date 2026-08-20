@@ -94,6 +94,16 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 - Observable result: `connectedNetworks` was empty, so X and LinkedIn cannot yet be scheduled or published.
 - Next action: user connects X and LinkedIn inside Metricool; assistant then chooses network-specific best times and schedules the launch posts automatically.
 
+### 2026-08-20 — Creator falsification challenge
+
+- Public search still found no exact-name listing for `Socratic Story Cartographer` on the monitored skill directories.
+- A current `r/WritingWithAI` Weekly Tool Thread provides an explicitly appropriate place for tool promotion, while current Hacker News discussion shows meaningful skepticism toward Agent Skills that behave like over-engineered prompts.
+- Hypothesis: asking writers to **break the skill on a story they know well** will create more useful first usage than another generic feature announcement.
+- Executed: changed `FIRST-TEST.md` from a simple demo into a falsifiable test with three concrete failure modes: unsupported diagnosis, repetitive loops, and regression caused by a proposed fix.
+- Observable result at execution time: repository conversion path now explicitly asks for counterexamples rather than praise; no external install signal is yet available.
+- Belief update: the next scarce resource is not more documentation. It is independent story tests that can produce either confirmed utility or concrete failure cases.
+- Next action: publish one creator-facing test invitation in the current `r/WritingWithAI` Weekly Tool Thread, then do not cross-post the same message elsewhere until there is a response signal.
+
 ## Success metrics
 
 Track these instead of raw post count:
