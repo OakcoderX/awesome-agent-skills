@@ -27,16 +27,16 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 | r/ClaudeCode | Large harness audience; benchmark/eval framing fits | User | PREPARED | Lead with self-falsifying diagnosis + benchmark, not creative-writing pitch |
 | V2EX | Chinese Claude Code / Codex / Agent Skill builders are active | User | PREPARED | Chinese technical post; installation command near top |
 | Hacker News Show HN | Good fit for open-source AI tooling with technical methodology | User | PREPARED | Use benchmark and design rationale; avoid marketing copy |
-| X / Twitter | Fastest place to test the one-line value proposition among Agent builders | Assistant via Metricool after account connection | BLOCKED_ON_ACCOUNT | Metricool plugin connected; Metricool brand currently reports no connected social networks |
+| X / Twitter | Fastest place to test the one-line value proposition among Agent builders | Assistant via Metricool after account connection | BLOCKED_ON_ACCOUNT | LinkedIn is connected; X still needs account connection |
 
 ### Wave C — creators / professional users
 
 | Channel | Why it matters | Action owner | Status | Notes |
 |---|---|---|---|---|
-| r/WritingWithAI | Community explicitly discussing AI as editor/co-writer | User | PREPARED | Ask for real manuscripts/tests, not stars |
+| r/WritingWithAI | Community explicitly discussing AI as editor/co-writer | User | PUBLISHED | Creator falsification challenge posted 2026-08-20; wait for 24h/72h response signal before reusing this message elsewhere |
 | 即刻 | Chinese AI + creative-professional overlap | User | PREPARED | Short Chinese post + personal origin + 3-minute test |
 | 知乎 | Best home for the long-form article explaining Socratic prompting + benchmark | User | PREPARED | Publish full reasoning article; link repo at end |
-| LinkedIn | Professional AI/content-production audience; good for methodology and open-source positioning | Assistant via Metricool after account connection | BLOCKED_ON_ACCOUNT | Metricool plugin connected; Metricool brand currently reports no connected social networks |
+| LinkedIn | Professional AI/content-production audience; good for methodology and open-source positioning | Assistant via Metricool | READY | Account connection confirmed; do not duplicate the Reddit message before first response signal |
 
 ## Explicit exclusions
 
@@ -55,14 +55,14 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 - Monitor public search/indexing signals for skills.sh, SkillsMP, SkillHub and other directories.
 - Prepare exact metadata, issue bodies, titles, install commands and community-specific drafts.
 - Attempt connector-backed GitHub writes when the connected GitHub App has write permission.
-- Publish/schedule X and LinkedIn through Metricool once those networks are connected inside the Metricool brand.
+- Publish/schedule LinkedIn through Metricool; publish/schedule X once X is connected inside the Metricool brand.
 
 ### User action currently required
 
 - Third-party GitHub issues/PRs where the installed GitHub App has read-only access.
 - Websites requiring GitHub/user sign-in or form submission (SkillsDirectory.com, SkillHub, etc.).
 - Reddit, Hacker News, V2EX, 即刻 and 知乎 posting because no authenticated posting connector is available in this runtime.
-- Connect X and LinkedIn accounts inside Metricool. The ChatGPT Metricool plugin is already connected, but the current Metricool brand reports `connectedNetworks: []`.
+- Connect X inside Metricool if X automation is wanted. LinkedIn is already connected.
 
 ## Actions already completed
 
@@ -90,9 +90,10 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 ### 2026-08-20 — Metricool automation check
 
 - Connected the Metricool for Social Media plugin to ChatGPT.
-- Queried the active Metricool brand (timezone `Asia/Shanghai`).
-- Observable result: `connectedNetworks` was empty, so X and LinkedIn cannot yet be scheduled or published.
-- Next action: user connects X and LinkedIn inside Metricool; assistant then chooses network-specific best times and schedules the launch posts automatically.
+- Initial query reported no connected social networks.
+- User subsequently refreshed the social login; a later check confirmed `linkedin` is connected.
+- X is not yet connected.
+- Updated action: LinkedIn can now be handled by the assistant; X still requires connection if desired.
 
 ### 2026-08-20 — Creator falsification challenge
 
@@ -100,9 +101,10 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 - A current `r/WritingWithAI` Weekly Tool Thread provides an explicitly appropriate place for tool promotion, while current Hacker News discussion shows meaningful skepticism toward Agent Skills that behave like over-engineered prompts.
 - Hypothesis: asking writers to **break the skill on a story they know well** will create more useful first usage than another generic feature announcement.
 - Executed: changed `FIRST-TEST.md` from a simple demo into a falsifiable test with three concrete failure modes: unsupported diagnosis, repetitive loops, and regression caused by a proposed fix.
-- Observable result at execution time: repository conversion path now explicitly asks for counterexamples rather than praise; no external install signal is yet available.
-- Belief update: the next scarce resource is not more documentation. It is independent story tests that can produce either confirmed utility or concrete failure cases.
-- Next action: publish one creator-facing test invitation in the current `r/WritingWithAI` Weekly Tool Thread, then do not cross-post the same message elsewhere until there is a response signal.
+- User then published the full creator-facing falsification challenge in `r/WritingWithAI`; screenshot confirmation received at approximately 21:43 UTC+8 on 2026-08-20.
+- Observable result at launch: the post is publicly submitted; response quality, test attempts, comments, and any install signal are not yet known.
+- Belief update: the experiment is now live. Do not dilute it by immediately cross-posting identical copy elsewhere.
+- Next action: collect the first 24h signal, then decide whether the stronger next move is LinkedIn methodology framing, an Agent-builder challenge, or a product revision triggered by concrete failure evidence.
 
 ## Success metrics
 
