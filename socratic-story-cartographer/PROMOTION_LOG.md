@@ -27,7 +27,7 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 | r/ClaudeCode | Large harness audience; benchmark/eval framing fits | User | PREPARED | Lead with self-falsifying diagnosis + benchmark, not creative-writing pitch |
 | V2EX | Chinese Claude Code / Codex / Agent Skill builders are active | User | PREPARED | Chinese technical post; installation command near top |
 | Hacker News Show HN | Good fit for open-source AI tooling with technical methodology | User | PREPARED | Use benchmark and design rationale; avoid marketing copy |
-| X / Twitter | Fastest place to test the one-line value proposition among Agent builders | User | PREPARED | Short post + install command + benchmark link; one launch post, not a thread spam campaign |
+| X / Twitter | Fastest place to test the one-line value proposition among Agent builders | Assistant via Metricool after account connection | BLOCKED_ON_ACCOUNT | Metricool plugin connected; Metricool brand currently reports no connected social networks |
 
 ### Wave C — creators / professional users
 
@@ -36,7 +36,7 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 | r/WritingWithAI | Community explicitly discussing AI as editor/co-writer | User | PREPARED | Ask for real manuscripts/tests, not stars |
 | 即刻 | Chinese AI + creative-professional overlap | User | PREPARED | Short Chinese post + personal origin + 3-minute test |
 | 知乎 | Best home for the long-form article explaining Socratic prompting + benchmark | User | PREPARED | Publish full reasoning article; link repo at end |
-| LinkedIn | Professional AI/content-production audience; good for methodology and open-source positioning | User | PREPARED | Use producer/workflow framing rather than “AI writes stories” framing |
+| LinkedIn | Professional AI/content-production audience; good for methodology and open-source positioning | Assistant via Metricool after account connection | BLOCKED_ON_ACCOUNT | Metricool plugin connected; Metricool brand currently reports no connected social networks |
 
 ## Explicit exclusions
 
@@ -55,12 +55,14 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 - Monitor public search/indexing signals for skills.sh, SkillsMP, SkillHub and other directories.
 - Prepare exact metadata, issue bodies, titles, install commands and community-specific drafts.
 - Attempt connector-backed GitHub writes when the connected GitHub App has write permission.
+- Publish/schedule X and LinkedIn through Metricool once those networks are connected inside the Metricool brand.
 
 ### User action currently required
 
 - Third-party GitHub issues/PRs where the installed GitHub App has read-only access.
 - Websites requiring GitHub/user sign-in or form submission (SkillsDirectory.com, SkillHub, etc.).
-- Reddit, Hacker News, V2EX, X, 即刻, 知乎 and LinkedIn posting because no authenticated connector for those accounts is available in this runtime.
+- Reddit, Hacker News, V2EX, 即刻 and 知乎 posting because no authenticated posting connector is available in this runtime.
+- Connect X and LinkedIn accounts inside Metricool. The ChatGPT Metricool plugin is already connected, but the current Metricool brand reports `connectedNetworks: []`.
 
 ## Actions already completed
 
@@ -84,6 +86,13 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 - Created `PROMOTION_KIT.md` with registry metadata and platform-specific drafts.
 - Created this persistent `PROMOTION_LOG.md` to record all subsequent promotion experiments.
 - Updated belief: highest-value sequence is standards compliance → real installs → quality-directory submissions → developer communities → creator communities.
+
+### 2026-08-20 — Metricool automation check
+
+- Connected the Metricool for Social Media plugin to ChatGPT.
+- Queried the active Metricool brand (timezone `Asia/Shanghai`).
+- Observable result: `connectedNetworks` was empty, so X and LinkedIn cannot yet be scheduled or published.
+- Next action: user connects X and LinkedIn inside Metricool; assistant then chooses network-specific best times and schedules the launch posts automatically.
 
 ## Success metrics
 
