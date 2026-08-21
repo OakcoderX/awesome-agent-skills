@@ -1,6 +1,6 @@
 # Socratic Story Cartographer — Promotion Log
 
-Last updated: 2026-08-20
+Last updated: 2026-08-21
 
 This file is the working record for distribution experiments. The goal is not maximum posting volume; it is to learn which channels produce real installs, real story tests, and useful feedback.
 
@@ -33,10 +33,10 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 
 | Channel | Why it matters | Action owner | Status | Notes |
 |---|---|---|---|---|
-| r/WritingWithAI | Community explicitly discussing AI as editor/co-writer | User | PUBLISHED | Creator falsification challenge posted 2026-08-20; wait for 24h/72h response signal before reusing this message elsewhere |
+| r/WritingWithAI | Community explicitly discussing AI as editor/co-writer | User | PUBLISHED | Creator falsification challenge posted 2026-08-20; collect 24h/72h response signal before reusing this message elsewhere |
 | 即刻 | Chinese AI + creative-professional overlap | User | PREPARED | Short Chinese post + personal origin + 3-minute test |
 | 知乎 | Best home for the long-form article explaining Socratic prompting + benchmark | User | PREPARED | Publish full reasoning article; link repo at end |
-| LinkedIn | Professional AI/content-production audience; good for methodology and open-source positioning | Assistant via Metricool | READY | Account connection confirmed; do not duplicate the Reddit message before first response signal |
+| LinkedIn | Professional AI/content-production audience; good for methodology and open-source positioning | Assistant via Metricool | PUBLISHED | Methodology/falsification post published 2026-08-21 11:00; analytics had not populated by the evening review |
 
 ## Explicit exclusions
 
@@ -105,6 +105,23 @@ Target: **15 channels in three waves**. Do not publish the identical article eve
 - Observable result at launch: the post is publicly submitted; response quality, test attempts, comments, and any install signal are not yet known.
 - Belief update: the experiment is now live. Do not dilute it by immediately cross-posting identical copy elsewhere.
 - Next action: collect the first 24h signal, then decide whether the stronger next move is LinkedIn methodology framing, an Agent-builder challenge, or a product revision triggered by concrete failure evidence.
+
+### 2026-08-21 — Daily review
+
+- The Reddit falsification challenge is now discoverable in public search inside the `r/WritingWithAI` weekly tool thread. This confirms the post is live and indexable, but public search did not surface a substantive reply, independent test report, or other clear conversion event during this review.
+- A separate LinkedIn methodology/falsification post was published through Metricool at 11:00 Asia/Shanghai on 2026-08-21. Metricool's post analytics endpoint still returned no populated metrics by the evening review, so impressions/clicks/reactions cannot yet be used as evidence.
+- GitHub still reports 0 stars and 0 forks on the fork repository. Those are weak proxies because the skill lives inside a larger fork, but they provide no positive adoption signal yet.
+- Fresh exact-name searches still did not surface `Socratic Story Cartographer` on the monitored skill directories. Discovery remains unproven.
+- **Belief strengthened:** more documentation is not the current bottleneck. The repo already explains the method, benchmark, installation, and first test.
+- **Belief weakened:** simply putting the same falsification message in more channels is unlikely to teach us much. Reddit and LinkedIn now provide two different audiences; wait for behavior before adding another generic channel.
+- **New hypothesis:** the creator audience may face too much onboarding friction from a terminal-first `npx skills add` instruction. A useful story tool can still fail conversion if the first-run path feels like developer tooling.
+- **New hypothesis:** the most important product claim is not “Socratic” but “better than one good prompt.” Until that is shown on unseen texts, promotion risks sounding like packaging around prompt engineering.
+
+#### Next-day top three experiments
+
+1. **24-hour conversion read on Reddit + LinkedIn.** Do not add a third broad channel before reading behavior. Success = at least one substantive signal: a real story test, an outbound click, a concrete question about using the skill, or a counterexample. Impressions alone do not count as success.
+2. **First-run friction test with 3 unfamiliar users.** Give them only the public GitHub entry point and observe whether they can reach a completed first analysis without coaching. Success = at least 2/3 complete a run within 5 minutes; failure if 2/3 are blocked by CLI/harness/install ambiguity. If failed, design a no-terminal first-test path before further promotion.
+3. **Skill vs. one-good-prompt blind A/B on unseen material.** Same model, same text, same evaluation dimensions: evidence anchoring, diagnosis update, regression awareness, stop discipline. Success = the Skill clearly wins at least 3 of 4 dimensions on a majority of unseen texts. If not, simplify the Skill before expanding distribution.
 
 ## Success metrics
 
