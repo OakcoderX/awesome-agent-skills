@@ -5,7 +5,20 @@ Instead of jumping to a verdict, it runs a loop of competing diagnoses, falsific
 
 **New here? [Try the 3-minute first test →](./FIRST-TEST.md)**
 
-## Install
+## Quick start — no terminal required
+
+If your AI agent can read GitHub and install skills, paste this directly into it:
+
+```text
+Install and enable Socratic Story Cartographer from:
+https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer
+
+Detect the Skill / Agent Skill installation method for your current harness, install it in the correct place, confirm that it can be discovered, then tell me how to run it. If you do not have filesystem or installation permission, do not pretend it worked; give me the exact manual steps for this environment.
+```
+
+Then give the agent a real story, scene, screenplay, or outline and ask it to run up to 3 loops.
+
+## Install with CLI
 
 Install the skill with the cross-agent Skills CLI:
 
