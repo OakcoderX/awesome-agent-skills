@@ -5,7 +5,7 @@
 A creator-oriented narrative diagnostic skill that uses Socratic questioning to support first-pass reading of fiction.
 It is designed for novels, screenplays, scenes, and multi-episode outlines.
 
-Version: 2.1
+Version: 2.2
 Author: Solopup.co
 
 The goal is not to give a final verdict, but to identify the highest-leverage story issues and the next correction that can be tried first.
@@ -35,7 +35,9 @@ I also used this approach in my own writing workflow and applied it to first-pas
 - Automatic input type classification: Novel / Screenplay / Outline / Scene / Mixed / Unclear.
 - Story-facing output language: goals, obstacles, choices, stakes, causality, and consequences.
 - Fixed loop for fast diagnosis and re-checking.
-- Clear handoff summary for producers and writers: what changed, what remains, what to fix next.
+- Long-work source manifests and coverage ledgers that prevent partial reading from becoming a work-wide claim.
+- Producer decision pages, issue routes, hard-error lists, and executable revision task cards for full-season or multi-episode outlines.
+- Explicit authority boundaries: an AI review, score, or validation pass is not human approval or canon promotion.
 
 ## Loop structure (default 3 loops)
 
@@ -89,6 +91,7 @@ If objective and boundaries are not given, the skill infers them, but explicit c
 ## Example prompts
 
 - `Run 3 loops on this series outline and give me the highest-leverage production risk first.`
+- `Review this full-season outline for a producer decision. Verify complete coverage, trace each major issue to its onset, and compile revision task cards.`
 - `Diagnose this screenplay scene only. Do not rewrite yet. Just locate what a minimal next edit should target.`
 - `Use benchmark mode and tell me whether this novel chapter reaches serious submission-level quality for [target].`
 

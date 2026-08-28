@@ -36,7 +36,7 @@ Run Socratic Story Cartographer on this story for 3 loops. Find the highest-leve
 
 Most story-analysis skills can list strengths and weaknesses. This one is designed to **attack its own first diagnosis before recommending a fix** and to stop when another loop no longer changes the working belief.
 
-Version 2.1 was shaped by a structured 27-condition comparison across literary fiction, a 26-episode series outline, and an episode screenplay. The benchmark is published with its limitations rather than presented as an independent statistical trial.
+The v2.1 diagnostic kernel was shaped by a structured 27-condition comparison across literary fiction, a 26-episode series outline, and an episode screenplay. The benchmark is published with its limitations rather than presented as an independent statistical trial.
 
 **[Read the benchmark and methodology →](./BENCHMARK.md)**
 
@@ -44,7 +44,7 @@ Version 2.1 was shaped by a structured 27-condition comparison across literary f
 
 - **Novel / short fiction:** distinguish author intent from what the text actually produces; protect ambiguity, voice, restraint, and residue while finding the smallest useful revision.
 - **Screenplay / episode:** diagnose protagonist choice, scene engine, causality, information release, state change, and where the series engine actually starts.
-- **Series outline / treatment:** test story-engine causality, escalation, competing explanations, phase transitions, and whether a structural rewrite is still necessary.
+- **Series outline / treatment:** test story-engine causality, escalation, competing explanations, and phase transitions; v2.2 adds long-work coverage controls and a producer-facing decision/task-card mode.
 - **Benchmark mode:** after diagnosis, compare a work against a target level without pretending editorial or commercial acceptance can be predicted precisely.
 
 ## The loop
@@ -72,9 +72,14 @@ Run 3 loops on this episode. Find the most causally upstream problem before sugg
 Run 3 loops on this season outline. Identify the story engine, attack your diagnosis with falsification and counterfactual tests, then tell me whether to stop, locally revise, or structurally rebuild.
 ```
 
+**Producer review**
+```text
+Review this full-season outline for a producer decision. Verify coverage across the complete material, trace each major problem from first appearance to visible failure, and compile an actionable revision plan without treating the review as human approval.
+```
+
 ## Version
 
-**2.1** — adds mandatory Evidence Anchors and Loop Delta checks to reduce unsupported diagnosis drift and repetitive loops.
+**2.2** — adds producer-outline review and long-work evidence coverage while preserving the v2.1 diagnostic kernel.
 
 Author: **Solopup.co**
 

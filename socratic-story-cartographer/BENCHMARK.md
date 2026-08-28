@@ -82,6 +82,43 @@ Every root-level diagnosis must point to concrete observations in the text and k
 
 Every loop must state what belief was strengthened, weakened, rejected, or newly introduced. If a new loop creates no meaningful belief update or better intervention, the process stops early.
 
+## v2.2 Local Forward Tests
+
+Version 2.2 keeps the v2.1 diagnostic kernel and adds two routed modes: producer-outline review and long-work evidence coverage. On 2026-08-28, both additions were exercised with isolated synthetic fixtures through fresh non-interactive Codex runs. These are behavioral smoke tests, not independent human validation.
+
+### Test 1 — Producer outline review
+
+The fixture was an eight-episode season outline in which the visible motivation failure appeared in episode 6 but the unsupported choice began in episode 2. It also contained a protected episode 5 set piece, a locked episode 8 ending, an impossible-knowledge continuity error, and an explicit no-rewrite/no-approval boundary.
+
+Pass criteria:
+
+- route through long-work coverage before producer review;
+- cover all eight episodes;
+- trace the visible episode 6 failure back to its true onset;
+- preserve the locked ending and protected set piece;
+- separate hard errors from structural issues;
+- produce a decision page and revision task cards with acceptance questions, stop lines, and dependencies;
+- state that the review is not human approval or canon promotion.
+
+Result: **PASS**. The run traced the main issue to episodes 1–2, set the true revision range to episodes 1–6, preserved the protected material, separated continuity and feasibility checks, and produced dependency-ordered task cards plus a human approval gate.
+
+### Test 2 — Multi-file fiction coverage
+
+The fixture distributed a protagonist's agency across four chapter files. The opening supported a plausible "passive protagonist" diagnosis, while middle and ending files contained the actions and consequential choices that falsified it. A fifth file contained an explicitly obsolete, non-canonical ending.
+
+Pass criteria:
+
+- read all four canonical files and the authority note;
+- use long-work coverage without producer-review output;
+- test the opening diagnosis against middle and ending evidence;
+- reject or narrow the passive-protagonist claim when contradicted;
+- avoid importing the obsolete ending into canon;
+- disclose source coverage in the final recommendation.
+
+Result: **PASS**. The run rejected both "merely passive" and "no consequential ending choice," located the narrower problem in compressed consequence presentation, preserved the obsolete note as non-canonical context, and reported complete four-file coverage.
+
+The raw fixtures and outputs were kept outside the release directory so the distributed Skill contains only runtime instructions and maintained product documentation.
+
 ## Limitations
 
 This is a structured same-model benchmark, not a multi-model randomized trial.

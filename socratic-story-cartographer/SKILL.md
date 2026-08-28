@@ -2,15 +2,14 @@
 name: socratic-story-cartographer
 description: Diagnose and iteratively improve novels, screenplays, scenes, characters, and story outlines using competing hypotheses, falsification, counterfactual tests, evidence anchors, minimum-sufficient intervention, blind re-check, and loop-delta stopping. Use for story diagnosis, screenplay review, outline triage, novel critique, story-engine analysis, producer review, or multi-loop revision.
 license: MIT
-compatibility: Portable Agent Skill; no external runtime or network access required.
 metadata:
   author: Solopup.co
-  version: "2.1"
+  version: "2.2"
 ---
 
 # Socratic Story Cartographer
 
-Version: 2.1
+Version: 2.2
 
 ## 0. Identity
 
@@ -73,8 +72,23 @@ Also infer when possible:
 - revision permission
 - target audience / publication / production context
 - explicitly protected elements
+- decision context: who will use the result, what they may decide now, and what remains unauthorized
 
 Do not ask for information that can reasonably be inferred from the supplied material.
+
+---
+
+## 2A. Mode Routing — added in v2.2
+
+Keep ordinary fiction, scene, character, and single-episode diagnosis in this file.
+
+Read a reference completely before using its mode:
+
+- For a full-season or multi-episode outline that needs producer triage, a production decision, cross-episode problem localization, or an executable revision plan, read and follow [`references/producer-outline-review.md`](references/producer-outline-review.md).
+- For any work that spans multiple files, many chapters or episodes, or more text than can be inspected reliably in one pass, read and follow [`references/long-work-evidence.md`](references/long-work-evidence.md) before forming a root diagnosis.
+- When both conditions apply, read the long-work evidence protocol first, then the producer-review mode.
+
+The producer-review mode changes the final deliverable, not the diagnostic kernel. Run the Socratic loop to generate and attack the diagnosis, then compile only supported conclusions into the producer-facing output.
 
 ---
 
@@ -196,7 +210,7 @@ Counterfactuals should test **structural necessity**, not merely invent alternat
 
 ---
 
-## 7. Evidence Anchor — mandatory in v2.1
+## 7. Evidence Anchor — mandatory since v2.1
 
 Every major diagnosis must be anchored to the work itself.
 
@@ -230,6 +244,22 @@ If a major claim cannot be anchored to concrete evidence:
 > lower confidence, keep it as an open hypothesis, or discard it.
 
 Avoid long quotation. Use the minimum evidence necessary to make the reasoning auditable.
+
+---
+
+## 7A. Long-Work Evidence Coverage — mandatory in v2.2
+
+Two evidence anchors do not prove that a long work was adequately inspected.
+
+When the material is long, distributed, or at risk of truncation, use [`references/long-work-evidence.md`](references/long-work-evidence.md). Maintain a source manifest and coverage ledger, read by semantic units, and distinguish:
+
+- evidence found in the covered material;
+- evidence absent from a fully covered scope;
+- material that remains unread, inaccessible, or uncertain.
+
+Do not turn "not found in the inspected portion" into "not present in the work."
+
+For work-wide or season-wide claims, seek evidence across the relevant span rather than relying on nearby examples from one section. If coverage is incomplete, narrow or defer the claim and disclose the gap.
 
 ---
 
@@ -427,7 +457,7 @@ Never assume your own revision succeeded.
 
 ---
 
-## 15. Loop Delta — mandatory in v2.1
+## 15. Loop Delta — mandatory since v2.1
 
 At the end of every loop, state what changed in the working model.
 
@@ -685,6 +715,8 @@ Only when high-information input is needed.
 ---
 
 ## 21. Final Output
+
+If Producer Outline Review mode is active, use the final deliverable defined in `references/producer-outline-review.md`. Keep the compact loop record as internal evidence or a separate appendix unless the user asks to see it.
 
 After the final loop, summarize:
 

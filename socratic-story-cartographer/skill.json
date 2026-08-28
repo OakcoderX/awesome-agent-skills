@@ -1,7 +1,7 @@
 {
   "name": "socratic-story-cartographer",
-  "version": "2.1.0",
-  "description": "Socratic story-development skill for novels, screenplays, scenes, and series outlines using competing diagnoses, falsification, counterfactual tests, evidence anchors, minimal intervention, and blind re-check.",
+  "version": "2.2.0",
+  "description": "Socratic story-development skill for novels, screenplays, scenes, and series outlines, with long-work evidence coverage and producer-facing outline review.",
   "author": "Solopup.co",
   "license": "MIT",
   "keywords": [
@@ -10,7 +10,9 @@
     "novel-critique",
     "outline-triage",
     "socratic-questioning",
-    "narrative-diagnosis"
+    "narrative-diagnosis",
+    "producer-review",
+    "long-document-review"
   ],
   "runtime": "universal"
 }

@@ -36,7 +36,7 @@ A portable Agent Skill for novels, screenplays and series outlines that attacks 
 
 **Why include it**
 
-Socratic Story Cartographer is a portable story-development Agent Skill for novels, screenplays, scenes and multi-episode outlines. Unlike a conventional critique prompt, it keeps competing diagnoses alive, attacks the strongest diagnosis with falsification and counterfactual tests, anchors root-level claims to textual evidence, predicts regression risk, and stops when another loop no longer changes the working belief. Version 2.1 publishes its benchmark methodology and limitations in the repository.
+Socratic Story Cartographer is a portable story-development Agent Skill for novels, screenplays, scenes and multi-episode outlines. Unlike a conventional critique prompt, it keeps competing diagnoses alive, attacks the strongest diagnosis with falsification and counterfactual tests, anchors root-level claims to textual evidence, predicts regression risk, and stops when another loop no longer changes the working belief. Version 2.2 adds long-work evidence coverage and producer-facing outline review; the repository also publishes the v2.1 diagnostic benchmark and its limitations.
 
 **Category focus**
 Creative / Writing, Productivity, AI Workflow
@@ -122,7 +122,7 @@ I write fiction/scripts and kept finding that LLM critique had a specific failur
 
 I made a portable Agent Skill that treats story review as a small belief-update loop: observe → competing diagnoses → falsification/counterfactual → highest-leverage intervention → blind re-check → update/stop.
 
-The current v2.1 requires evidence anchors and a loop delta, so a requested “3 loops” is a maximum, not an excuse to manufacture three different opinions. I ran a structured same-model comparison across literary fiction, a 26-episode outline and an episode screenplay; the benchmark and its limitations are in the repo.
+The current v2.2 keeps the v2.1 evidence-anchor and loop-delta rules, so a requested “3 loops” is a maximum, not an excuse to manufacture three different opinions. It also verifies coverage before making long-work claims and compiles full-season findings into producer decisions and revision task cards. The structured same-model benchmark for the diagnostic kernel and its limitations are in the repo.
 
 It’s just SKILL.md + documentation, no service or account required:
 `npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer`
