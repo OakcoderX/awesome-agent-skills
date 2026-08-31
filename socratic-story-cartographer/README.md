@@ -40,6 +40,14 @@ The v2.1 diagnostic kernel was shaped by a structured 27-condition comparison ac
 
 **[Read the benchmark and methodology →](./BENCHMARK.md)**
 
+## Why a Skill instead of one good prompt?
+
+For one short scene, a carefully written prompt may be enough. A Skill becomes more useful when you want the same review discipline to survive across long works, repeated revisions, and producer handoffs.
+
+Version 2.2 routes long or multi-file work through dedicated reference protocols before it makes work-wide claims. Those protocols require source coverage, distinguish unread material from true absence, preserve locked/protected elements, and compile supported findings into producer-facing decisions and revision task cards. The goal is not to make the model magically smarter; it is to make the review process **repeatable, inspectable, and harder to shortcut** than a one-off critique prompt.
+
+That claim is testable. Compare the same model on the same unseen material with one strong prompt versus this Skill, then check whether the Skill more reliably anchors evidence, updates its diagnosis, notices regression risk, and stops when another loop adds no information.
+
 ## What it is good at
 
 - **Novel / short fiction:** distinguish author intent from what the text actually produces; protect ambiguity, voice, restraint, and residue while finding the smallest useful revision.
