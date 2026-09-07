@@ -48,6 +48,10 @@ Version 2.2 routes long or multi-file work through dedicated reference protocols
 
 That claim is testable. Compare the same model on the same unseen material with one strong prompt versus this Skill, then check whether the Skill more reliably anchors evidence, updates its diagnosis, notices regression risk, and stops when another loop adds no information.
 
+**[Run the public Skill-vs-prompt A/B protocol →](./AB-TEST.md)**
+
+The baseline in that protocol is intentionally strong. If the Skill does not show a repeatable advantage on the long-work tasks it claims to improve, treat that as a product problem rather than a marketing problem.
+
 ## What it is good at
 
 - **Novel / short fiction:** distinguish author intent from what the text actually produces; protect ambiguity, voice, restraint, and residue while finding the smallest useful revision.
@@ -94,6 +98,7 @@ Author: **Solopup.co**
 ## Documentation
 
 - [3-minute first test](./FIRST-TEST.md)
+- [Skill vs prompt A/B test](./AB-TEST.md)
 - [Benchmark](./BENCHMARK.md)
 - [English](./README.en.md)
 - [中文](./README.zh.md)
