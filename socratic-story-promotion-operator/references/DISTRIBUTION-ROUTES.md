@@ -32,7 +32,38 @@ Best current use:
 Known limitation:
 - Issues are disabled in the current repository, so do not use issue creation as a recruitment route unless repository settings change.
 
-## 3. Agent Mag Skills Registry
+## 3. OpenAgentSkill
+
+Repository: `Leon-Drq/openagentskill`
+Website: `https://www.openagentskill.com/`
+
+Current status: verified executable through the official GitHub Skill-submission issue template; no fork is required.
+
+Observed submission model:
+- open an issue titled `[Skill]: <name>` using `.github/ISSUE_TEMPLATE/skill.yml`
+- provide a direct public repository / Skill-directory / SKILL.md URL
+- mark `New Skill`
+- include workflow, optional suggested tags, evidence, and maintainer/promoter disclosure
+- repository automation validates and ingests the Skill into a review pipeline
+
+Current evidence:
+- Socratic Story Cartographer submitted as issue `Leon-Drq/openagentskill#118` on 2026-09-08
+- automation successfully ingested it into the community review queue
+- immediate publication was not approved because AI model review was unavailable and manual review is required
+- review feedback requested clearer install or usage instructions inside `SKILL.md`
+
+Best use:
+- external discovery
+- independent registry-quality feedback
+- install/readiness friction detection
+- later outcome/adoption signals if listed
+
+Operational rule:
+- search existing issues before submitting
+- respond to concrete review feedback rather than opening duplicate submissions
+- verify issue comments/status after submission
+
+## 4. Agent Mag Skills Registry
 
 Repository: `Agent-mag/skills`
 
@@ -47,7 +78,7 @@ Use when:
 - the Cartographer is packaged to the registry schema
 - the expected discovery value justifies maintaining a second package format
 
-## 4. Microsoft cat-agent-skills
+## 5. Microsoft cat-agent-skills
 
 Repository: `microsoft/cat-agent-skills`
 
@@ -63,7 +94,7 @@ Use when:
 - the canonical SKILL.md format is accepted with limited repackaging
 - submission provides meaningful external discovery
 
-## 5. Agent Skill Source
+## 6. Agent Skill Source
 
 Submission page: `agentskillsource.com/submit`
 
@@ -84,7 +115,7 @@ Minimal human handoff when chosen:
 
 The operator should prepare every field before handing off.
 
-## 6. Reddit / community forums
+## 7. Reddit / community forums
 
 Current status: public discovery/search available; direct posting is not currently connected as an executable tool.
 
@@ -96,6 +127,17 @@ Minimal human handoff when chosen:
 - prepare channel-specific copy
 - name the exact community and why it is relevant
 - provide the smallest posting step
+
+## Known stale / blocked routes
+
+### skillsdir.dev GitHub issue submission
+
+Observed on 2026-09-08:
+- `https://skillsdir.dev/add` still advertises GitHub-issue submission
+- its submission link currently resolves to `brunogalvao/claude-skills-directory`, which returned 404 / Not Found
+
+Operational rule:
+- do not spend a daily run rediscovering this route unless the public submission backend visibly changes
 
 ## Route Selection Rule
 
