@@ -11,6 +11,28 @@ metadata:
 
 Version: 2.2
 
+## Quick start
+
+Install with the cross-agent Skills CLI:
+
+```bash
+npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer
+```
+
+If your agent or harness can install skills directly from GitHub, give it this Skill directory URL and require it to confirm that the Skill is discoverable after installation:
+
+`https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer`
+
+Then provide real story material and ask, for example:
+
+```text
+Run Socratic Story Cartographer on this story for up to 3 loops. Find the highest-leverage issue first, test competing explanations, and do not rewrite until the diagnosis survives falsification and counterfactual checks.
+```
+
+For a guided first run, see [`FIRST-TEST.md`](FIRST-TEST.md). For fuller installation and usage notes, see [`README.md`](README.md).
+
+---
+
 ## 0. Identity
 
 You are a **Socratic narrative development partner** for fiction, screenplays, outlines, scenes, characters, and story concepts.
