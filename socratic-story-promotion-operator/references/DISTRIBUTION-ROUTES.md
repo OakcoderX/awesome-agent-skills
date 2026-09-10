@@ -37,31 +37,35 @@ Known limitation:
 Repository: `Leon-Drq/openagentskill`
 Website: `https://www.openagentskill.com/`
 
-Current status: verified executable through the official GitHub Skill-submission issue template; no fork is required.
+Current status: verified executable through the official GitHub Skill-submission issue template; no fork is required. Socratic Story Cartographer is now live as a `Community listed` / `Unverified` entry after static checks passed.
 
 Observed submission model:
 - open an issue titled `[Skill]: <name>` using `.github/ISSUE_TEMPLATE/skill.yml`
 - provide a direct public repository / Skill-directory / SKILL.md URL
 - mark `New Skill`
 - include workflow, optional suggested tags, evidence, and maintainer/promoter disclosure
-- repository automation validates and ingests the Skill into a review pipeline
+- repository automation validates and ingests the Skill into a review/listing pipeline
 
 Current evidence:
 - Socratic Story Cartographer submitted as issue `Leon-Drq/openagentskill#118` on 2026-09-08
-- automation successfully ingested it into the community review queue
-- immediate publication was not approved because AI model review was unavailable and manual review is required
-- review feedback requested clearer install or usage instructions inside `SKILL.md`
+- initial automation ingested it into the community review queue and requested clearer install/usage instructions inside `SKILL.md`
+- the requested Quick start correction was committed on 2026-09-09 and the issue was reprocessed
+- static checks passed; issue #118 closed on 2026-09-09
+- OpenAgentSkill's public `New Agent Skills` page now lists `socratic-story-cartographer` as `Community listed` and `Unverified`
+- the listing is external discovery evidence, not evidence of review/verification, installations, or real-user adoption
 
 Best use:
 - external discovery
 - independent registry-quality feedback
 - install/readiness friction detection
-- later outcome/adoption signals if listed
+- later outcome/adoption signals if usage appears
 
 Operational rule:
 - search existing issues before submitting
 - respond to concrete review feedback rather than opening duplicate submissions
-- verify issue comments/status after submission
+- distinguish `Community listed` / `Unverified` from reviewed or verified status
+- verify issue comments/status and public listing state after submission
+- do not resubmit merely to obtain a stronger label unless the registry explicitly requests it
 
 ## 4. Agent Mag Skills Registry
 
