@@ -4,9 +4,14 @@ Use this file as a maintained action pool. Prefer routes with current evidence a
 
 ## 1. LinkedIn via Metricool
 
-Current status: connected and executable.
+Current status: connector is available, but the LinkedIn publishing connection is currently blocked by authentication failure.
 
-Best current use:
+Current evidence:
+- scheduled tester-recruitment post `371923844` was due 2026-09-11 11:00 Asia/Shanghai
+- on 2026-09-12, Metricool still returned the post as scheduled with provider status `ERROR` and detailed status `authentication failure`
+- therefore the recruitment experiment did not actually launch
+
+Best current use after reconnection:
 - professional story developers
 - producers, editors, screenwriters, long-form AI users
 - tester recruitment
@@ -14,7 +19,9 @@ Best current use:
 - value-proposition experiments
 
 Operational rule:
-- prefer evidence, protocols, failures, and concrete workflow pain over generic announcements
+- do not reschedule or duplicate the recruitment post while the same authentication failure persists
+- the account owner must reconnect/repair the LinkedIn connection in Metricool before this route is executable again
+- once restored, prefer evidence, protocols, failures, and concrete workflow pain over generic announcements
 - avoid repeating substantially the same message without new evidence
 - verify scheduled/published state in Metricool after every write
 
@@ -37,7 +44,7 @@ Known limitation:
 Repository: `Leon-Drq/openagentskill`
 Website: `https://www.openagentskill.com/`
 
-Current status: verified executable through the official GitHub Skill-submission issue template; no fork is required. Socratic Story Cartographer is now live as a `Community listed` / `Unverified` entry after static checks passed.
+Current status: verified executable through the official GitHub Skill-submission issue template; no fork is required. Socratic Story Cartographer is live as a `Community listed` / `Unverified` entry after static checks passed. An ownership/claim-path inquiry is now active on issue #118.
 
 Observed submission model:
 - open an issue titled `[Skill]: <name>` using `.github/ISSUE_TEMPLATE/skill.yml`
@@ -51,13 +58,16 @@ Current evidence:
 - initial automation ingested it into the community review queue and requested clearer install/usage instructions inside `SKILL.md`
 - the requested Quick start correction was committed on 2026-09-09 and the issue was reprocessed
 - static checks passed; issue #118 closed on 2026-09-09
-- OpenAgentSkill's public `New Agent Skills` page now lists `socratic-story-cartographer` as `Community listed` and `Unverified`
-- the listing is external discovery evidence, not evidence of review/verification, installations, or real-user adoption
+- OpenAgentSkill's public listing is `Community listed` and `Unverified`
+- OpenAgentSkill states that claim/verification requires OAuth or repository-ownership proof
+- on 2026-09-12, a maintainer-facing comment was posted on #118 asking for the supported repository-ownership proof path; comment id `5642783940`
+- the listing is external discovery evidence, not evidence of runtime quality, installations, or real-user adoption
 
 Best use:
 - external discovery
 - independent registry-quality feedback
 - install/readiness friction detection
+- ownership/verification trust signal if the claim path succeeds
 - later outcome/adoption signals if usage appears
 
 Operational rule:
@@ -66,8 +76,29 @@ Operational rule:
 - distinguish `Community listed` / `Unverified` from reviewed or verified status
 - verify issue comments/status and public listing state after submission
 - do not resubmit merely to obtain a stronger label unless the registry explicitly requests it
+- while the ownership inquiry is awaiting a response, do not post repetitive claim requests
 
-## 4. Agent Mag Skills Registry
+## 4. libukai/awesome-agent-skills
+
+Repository: `libukai/awesome-agent-skills`
+
+Observed submission model:
+- repository accepts `Add: ...` skill-submission issues; issue #124 is a current example
+- submission can include repository URL, Skill directory, raw `SKILL.md`, license, category, description, compatibility, install command, and inclusion rationale
+- this is relevant external discovery because the repository curates Agent Skills and explicitly welcomes issues
+
+Current execution constraint:
+- duplicate search on 2026-09-12 found no existing Socratic Story Cartographer issue
+- a prepared submission was attempted on 2026-09-12, but GitHub returned `403 Resource not accessible by integration`
+- therefore this route is blocked in the current GitHub connector even though the repository itself accepts issues
+
+Use when:
+- GitHub integration permission changes, or a minimal human issue-submission handoff is justified by expected discovery value
+
+Operational rule:
+- do not retry the same connector write on each daily run while permission is unchanged
+
+## 5. Agent Mag Skills Registry
 
 Repository: `Agent-mag/skills`
 
@@ -82,7 +113,7 @@ Use when:
 - the Cartographer is packaged to the registry schema
 - the expected discovery value justifies maintaining a second package format
 
-## 5. Microsoft cat-agent-skills
+## 6. Microsoft cat-agent-skills
 
 Repository: `microsoft/cat-agent-skills`
 
@@ -98,7 +129,7 @@ Use when:
 - the canonical SKILL.md format is accepted with limited repackaging
 - submission provides meaningful external discovery
 
-## 6. Agent Skill Source
+## 7. Agent Skill Source
 
 Submission page: `agentskillsource.com/submit`
 
@@ -119,7 +150,7 @@ Minimal human handoff when chosen:
 
 The operator should prepare every field before handing off.
 
-## 7. Reddit / community forums
+## 8. Reddit / community forums
 
 Current status: public discovery/search available; direct posting is not currently connected as an executable tool.
 
