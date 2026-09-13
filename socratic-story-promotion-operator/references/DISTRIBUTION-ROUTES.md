@@ -8,7 +8,7 @@ Current status: connector is available, but the LinkedIn publishing connection i
 
 Current evidence:
 - scheduled tester-recruitment post `371923844` was due 2026-09-11 11:00 Asia/Shanghai
-- on 2026-09-12, Metricool still returned the post as scheduled with provider status `ERROR` and detailed status `authentication failure`
+- on 2026-09-13, Metricool still returned the post as scheduled with provider status `ERROR` and detailed status `authentication failure`
 - therefore the recruitment experiment did not actually launch
 
 Best current use after reconnection:
@@ -44,7 +44,7 @@ Known limitation:
 Repository: `Leon-Drq/openagentskill`
 Website: `https://www.openagentskill.com/`
 
-Current status: verified executable through the official GitHub Skill-submission issue template; no fork is required. Socratic Story Cartographer is live as a `Community listed` / `Unverified` entry after static checks passed. An ownership/claim-path inquiry is now active on issue #118.
+Current status: Socratic Story Cartographer is live as a `Community listed` / `Unverified` entry after static checks passed. An ownership/claim-path inquiry is active on issue #118, but no maintainer response was present when rechecked on 2026-09-13.
 
 Observed submission model:
 - open an issue titled `[Skill]: <name>` using `.github/ISSUE_TEMPLATE/skill.yml`
@@ -61,6 +61,7 @@ Current evidence:
 - OpenAgentSkill's public listing is `Community listed` and `Unverified`
 - OpenAgentSkill states that claim/verification requires OAuth or repository-ownership proof
 - on 2026-09-12, a maintainer-facing comment was posted on #118 asking for the supported repository-ownership proof path; comment id `5642783940`
+- on 2026-09-13, that comment still had no maintainer reply
 - the listing is external discovery evidence, not evidence of runtime quality, installations, or real-user adoption
 
 Best use:
@@ -98,7 +99,53 @@ Use when:
 Operational rule:
 - do not retry the same connector write on each daily run while permission is unchanged
 
-## 5. Agent Mag Skills Registry
+## 5. AgentCaps Registry
+
+Repository: `agentcaps/registry`
+Standing intake: `agentcaps/registry#1` — `Submit your SKILL.md URL`
+
+Observed submission model:
+- the open standing issue explicitly invites maintainers to comment with a SKILL.md URL, purpose, audience, suggested tags/capabilities, and representative queries
+- the stated goal is to improve import behavior, CatalogEntry mapping, validation findings, and search quality
+- this is a relevant external discovery/validation route rather than a generic announcement channel
+
+Current execution constraint:
+- issue #1 was verified open on 2026-09-13 with zero comments
+- a complete Socratic Story Cartographer submission comment was attempted on 2026-09-13
+- GitHub returned `403 Resource not accessible by integration`
+- issue #1 remained at zero comments after verification, so no submission occurred
+
+Use when:
+- GitHub integration permission changes, or a minimal human comment handoff is justified by expected registry/import feedback
+
+Operational rule:
+- do not retry the same connector write daily while permission is unchanged
+- if eventually submitted, do not duplicate while awaiting import/validation feedback
+
+## 6. OmniSkill Registry
+
+Website: `https://omniskill.online/`
+Repository / manual fallback: `diegosouzapw/awesome-omni-skill`
+
+Observed submission model:
+- the public registry exposes a `Submit a Skill Repository` flow for a GitHub repository containing SKILL.md files
+- recent repository issues are also being used as manual indexing requests when the public submit path fails
+- the repository is an external aggregator/discovery surface, so a successful submission would create independent discovery evidence
+
+Current execution constraint:
+- exact duplicate search on 2026-09-13 found no Socratic Story Cartographer issue
+- a prepared `Add Socratic Story Cartographer skill` issue was attempted on 2026-09-13
+- GitHub returned `403 Resource not accessible by integration`
+- a post-attempt duplicate search still found no submission, confirming no external state change
+- the current runtime also cannot operate the interactive website form directly
+
+Use when:
+- GitHub integration permission changes, or the registry exposes an executable non-interactive submission route
+
+Operational rule:
+- do not retry the same GitHub issue write daily while permission is unchanged
+
+## 7. Agent Mag Skills Registry
 
 Repository: `Agent-mag/skills`
 
@@ -113,7 +160,7 @@ Use when:
 - the Cartographer is packaged to the registry schema
 - the expected discovery value justifies maintaining a second package format
 
-## 6. Microsoft cat-agent-skills
+## 8. Microsoft cat-agent-skills
 
 Repository: `microsoft/cat-agent-skills`
 
@@ -129,7 +176,7 @@ Use when:
 - the canonical SKILL.md format is accepted with limited repackaging
 - submission provides meaningful external discovery
 
-## 7. Agent Skill Source
+## 9. Agent Skill Source
 
 Submission page: `agentskillsource.com/submit`
 
@@ -150,7 +197,7 @@ Minimal human handoff when chosen:
 
 The operator should prepare every field before handing off.
 
-## 8. Reddit / community forums
+## 10. Reddit / community forums
 
 Current status: public discovery/search available; direct posting is not currently connected as an executable tool.
 
