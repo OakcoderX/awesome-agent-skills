@@ -8,7 +8,7 @@ Current status: connector is available, but the LinkedIn publishing connection i
 
 Current evidence:
 - scheduled tester-recruitment post `371923844` was due 2026-09-11 11:00 Asia/Shanghai
-- on 2026-09-13, Metricool still returned the post as scheduled with provider status `ERROR` and detailed status `authentication failure`
+- on 2026-09-14, Metricool still returned the post with provider status `ERROR` and detailed status `authentication failure`
 - therefore the recruitment experiment did not actually launch
 
 Best current use after reconnection:
@@ -21,7 +21,8 @@ Best current use after reconnection:
 Operational rule:
 - do not reschedule or duplicate the recruitment post while the same authentication failure persists
 - the account owner must reconnect/repair the LinkedIn connection in Metricool before this route is executable again
-- once restored, prefer evidence, protocols, failures, and concrete workflow pain over generic announcements
+- once restored, reschedule the failed tester-recruitment message exactly once because the original publication time is already past
+- prefer evidence, protocols, failures, and concrete workflow pain over generic announcements
 - avoid repeating substantially the same message without new evidence
 - verify scheduled/published state in Metricool after every write
 
@@ -38,13 +39,14 @@ Best current use:
 
 Known limitation:
 - Issues are disabled in the current repository, so do not use issue creation as a recruitment route unless repository settings change.
+- PR #1 is intentionally open as the external A/B feedback thread. As of 2026-09-14 it has no human tester response; its only comment and +1 reaction are bot-generated and must not be counted as adoption evidence.
 
 ## 3. OpenAgentSkill
 
 Repository: `Leon-Drq/openagentskill`
 Website: `https://www.openagentskill.com/`
 
-Current status: Socratic Story Cartographer is live as a `Community listed` / `Unverified` entry after static checks passed. An ownership/claim-path inquiry is active on issue #118, but no maintainer response was present when rechecked on 2026-09-13.
+Current status: Socratic Story Cartographer is live as a `Community listed` / `Unverified` entry after static checks passed. An ownership/claim-path inquiry is active on issue #118, but no maintainer response was present when rechecked on 2026-09-14.
 
 Observed submission model:
 - open an issue titled `[Skill]: <name>` using `.github/ISSUE_TEMPLATE/skill.yml`
@@ -61,7 +63,8 @@ Current evidence:
 - OpenAgentSkill's public listing is `Community listed` and `Unverified`
 - OpenAgentSkill states that claim/verification requires OAuth or repository-ownership proof
 - on 2026-09-12, a maintainer-facing comment was posted on #118 asking for the supported repository-ownership proof path; comment id `5642783940`
-- on 2026-09-13, that comment still had no maintainer reply
+- on 2026-09-14, issue #118 still had five comments and no response after that ownership inquiry
+- code inspection established that claim creation requires a site-authenticated OpenAgentSkill session; GitHub OAuth owner-match may verify immediately, otherwise the site can issue a 24-hour repository-file challenge
 - the listing is external discovery evidence, not evidence of runtime quality, installations, or real-user adoption
 
 Best use:
@@ -145,7 +148,40 @@ Use when:
 Operational rule:
 - do not retry the same GitHub issue write daily while permission is unchanged
 
-## 7. Agent Mag Skills Registry
+## 7. AgentSkillsHub
+
+Repository: `zhuyansen/agent-skills-hub`
+Website: `https://agentskillshub.top/`
+
+Current status: active external Agent Skills directory and discovery route. The repository reported 357 stars when checked on 2026-09-14, and its README says community submissions can use the homepage form or open a GitHub issue; submitted repositories enter the next 8-hour sync.
+
+Observed submission model:
+- homepage `Submit Skill` flow for a GitHub repository
+- GitHub issue fallback explicitly documented in the README
+- recent issues #15 and #16 are repository-submission examples
+- directory classifies/scans Agent Skills, MCP servers, Codex skills, and related projects and refreshes its dataset every 8 hours
+
+Important subdirectory caveat:
+- frontend `sbSubmitSkill()` extracts only `owner/repo` from the supplied GitHub URL and deduplicates on `repo_full_name`
+- therefore submitting `https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer` through the automated form collapses to `OakcoderX/awesome-agent-skills` rather than uniquely identifying the Cartographer subdirectory
+- for this Skill, the manual issue route is preferable because it can name the subdirectory and provide Skill-specific metadata
+
+Current execution constraint:
+- duplicate search on 2026-09-14 found no existing `Socratic Story Cartographer` submission issue
+- a complete manual issue submission was attempted on 2026-09-14
+- GitHub returned `403 Resource not accessible by integration`
+- a second duplicate search verified that no issue was created
+- the current runtime has no authorized arbitrary form/POST capability for the public submission form
+
+Use when:
+- GitHub integration permission changes, or a minimal manual issue submission becomes justified
+
+Operational rule:
+- do not retry the same connector write daily while permission is unchanged
+- if submitted manually, use the issue route rather than assuming the automated repo-level form creates a distinct subdirectory Skill entry
+- verify actual indexing after at least one sync cycle; issue creation alone is not listing evidence
+
+## 8. Agent Mag Skills Registry
 
 Repository: `Agent-mag/skills`
 
@@ -160,7 +196,7 @@ Use when:
 - the Cartographer is packaged to the registry schema
 - the expected discovery value justifies maintaining a second package format
 
-## 8. Microsoft cat-agent-skills
+## 9. Microsoft cat-agent-skills
 
 Repository: `microsoft/cat-agent-skills`
 
@@ -176,7 +212,7 @@ Use when:
 - the canonical SKILL.md format is accepted with limited repackaging
 - submission provides meaningful external discovery
 
-## 9. Agent Skill Source
+## 10. Agent Skill Source
 
 Submission page: `agentskillsource.com/submit`
 
@@ -197,7 +233,7 @@ Minimal human handoff when chosen:
 
 The operator should prepare every field before handing off.
 
-## 10. Reddit / community forums
+## 11. Reddit / community forums
 
 Current status: public discovery/search available; direct posting is not currently connected as an executable tool.
 
