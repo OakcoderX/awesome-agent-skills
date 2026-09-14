@@ -50,6 +50,8 @@ That claim is testable. Compare the same model on the same unseen material with 
 
 **[Run the public Skill-vs-prompt A/B protocol →](./AB-TEST.md)**
 
+**External tester? [Report the result in the public feedback thread →](https://github.com/OakcoderX/awesome-agent-skills/pull/1)**
+
 The baseline in that protocol is intentionally strong. If the Skill does not show a repeatable advantage on the long-work tasks it claims to improve, treat that as a product problem rather than a marketing problem.
 
 ## What it is good at
