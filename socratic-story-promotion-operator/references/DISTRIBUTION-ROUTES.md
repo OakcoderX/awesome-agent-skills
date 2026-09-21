@@ -4,14 +4,16 @@ Use this file as a maintained action pool. Prefer routes with current evidence a
 
 ## 1. LinkedIn via Metricool
 
-Current status: connector is available, but the LinkedIn publishing connection is currently blocked by authentication failure.
+Current status: executable again as of 2026-09-21. Metricool returned current LinkedIn best-time data and accepted the previously failed tester-recruitment message for a new publication time with provider status `PENDING`.
 
 Current evidence:
-- scheduled tester-recruitment post `371923844` was due 2026-09-11 11:00 Asia/Shanghai
-- on 2026-09-14, Metricool still returned the post with provider status `ERROR` and detailed status `authentication failure`
-- therefore the recruitment experiment did not actually launch
+- original tester-recruitment post `371923844` was due 2026-09-11 11:00 Asia/Shanghai and failed with `ERROR / authentication failure`
+- on 2026-09-21, LinkedIn best-time lookup succeeded and the original message was rescheduled exactly once to 2026-09-21 11:00 Asia/Shanghai
+- updated Metricool post id is `379101947`; uuid remains `1023591338346497620`
+- post-read verification returned LinkedIn provider status `PENDING / Pending`
+- this is restored scheduling evidence, not yet publication or adoption evidence
 
-Best current use after reconnection:
+Best current use:
 - professional story developers
 - producers, editors, screenwriters, long-form AI users
 - tester recruitment
@@ -19,11 +21,11 @@ Best current use after reconnection:
 - value-proposition experiments
 
 Operational rule:
-- do not reschedule or duplicate the recruitment post while the same authentication failure persists
-- the account owner must reconnect/repair the LinkedIn connection in Metricool before this route is executable again
-- once restored, reschedule the failed tester-recruitment message exactly once because the original publication time is already past
+- do not duplicate the recruitment message while post `379101947` is pending or during its clean 48-72 hour observation window after successful publication
+- first verify actual publication state after the scheduled time
+- judge the experiment on qualified tester replies, substantive inquiries, or external A/B results, not impressions
+- if publication fails again, treat it as infrastructure failure rather than message failure and resume the documented fallback hierarchy
 - prefer evidence, protocols, failures, and concrete workflow pain over generic announcements
-- avoid repeating substantially the same message without new evidence
 - verify scheduled/published state in Metricool after every write
 
 ## 2. GitHub repository
@@ -39,14 +41,14 @@ Best current use:
 
 Known limitation:
 - Issues are disabled in the current repository, so do not use issue creation as a recruitment route unless repository settings change.
-- PR #1 is intentionally open as the external A/B feedback thread. As of 2026-09-14 it has no human tester response; its only comment and +1 reaction are bot-generated and must not be counted as adoption evidence.
+- PR #1 is intentionally open as the external A/B feedback thread. As of 2026-09-21 it has no human tester response; its only comment and +1 reaction are bot-generated and must not be counted as adoption evidence.
 
 ## 3. OpenAgentSkill
 
 Repository: `Leon-Drq/openagentskill`
 Website: `https://www.openagentskill.com/`
 
-Current status: Socratic Story Cartographer is live as a `Community listed` / `Unverified` entry after static checks passed. An ownership/claim-path inquiry is active on issue #118, but no maintainer response was present when rechecked on 2026-09-14.
+Current status: Socratic Story Cartographer is live as a `Community listed` / `Unverified` entry after static checks passed. An ownership/claim-path inquiry is active on issue #118, but no maintainer response was present when rechecked on 2026-09-21.
 
 Observed submission model:
 - open an issue titled `[Skill]: <name>` using `.github/ISSUE_TEMPLATE/skill.yml`
@@ -63,7 +65,7 @@ Current evidence:
 - OpenAgentSkill's public listing is `Community listed` and `Unverified`
 - OpenAgentSkill states that claim/verification requires OAuth or repository-ownership proof
 - on 2026-09-12, a maintainer-facing comment was posted on #118 asking for the supported repository-ownership proof path; comment id `5642783940`
-- on 2026-09-14, issue #118 still had five comments and no response after that ownership inquiry
+- on 2026-09-21, issue #118 still had five comments and no response after that ownership inquiry
 - code inspection established that claim creation requires a site-authenticated OpenAgentSkill session; GitHub OAuth owner-match may verify immediately, otherwise the site can issue a 24-hour repository-file challenge
 - the listing is external discovery evidence, not evidence of runtime quality, installations, or real-user adoption
 
