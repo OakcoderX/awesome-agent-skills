@@ -4,12 +4,12 @@ description: Operate and improve promotion for Socratic Story Cartographer throu
 license: MIT
 metadata:
   author: Solopup.co
-  version: "0.1"
+  version: "0.2"
 ---
 
 # Socratic Story Promotion Operator
 
-Version: 0.1
+Version: 0.2
 
 ## 0. Mission
 
@@ -185,24 +185,45 @@ Do not reinterpret a failed experiment as a marketing success.
 
 ## 6. Daily Mode
 
-Use Daily Mode for concrete execution.
+Use Daily Mode for concrete execution and blocker watching.
 
 Required sequence:
 1. Read `STATE.md`.
 2. Verify the previous committed action.
 3. Inspect only the signals needed for today's decision.
-4. Execute one audience-facing, experiment, feedback, or discovery action.
-5. If blocked, execute a fallback.
+4. If a meaningful condition changed, execute one audience-facing, experiment, feedback, or discovery action.
+5. If that action is blocked and a viable independent fallback exists, execute the fallback.
 6. Verify the action actually changed external state.
-7. Update `STATE.md` with the result and next commitment.
+7. Update `STATE.md` when there is a meaningful result, blocker change, or belief update.
 
-A Daily Mode run is incomplete if it only summarizes metrics, drafts recommendations, or edits internal documentation.
+A Daily Mode run is incomplete if it only summarizes metrics, drafts recommendations, or edits internal documentation when an executable evidence-producing route is available.
+
+### 6.1 No-trigger scheduled runs
+
+For recurring scheduled operation, **unchanged blockers are a normal no-trigger state, not a reason to disable the workflow**.
+
+When all of the following are true:
+- the active experiment is still waiting on a known external condition
+- monitored blocker states are unchanged
+- no qualified user feedback arrived
+- no documented route became newly executable
+- launching another message would duplicate or contaminate the active experiment
+
+then:
+- do not invent a new tactic merely because another day passed
+- do not retry known permission failures
+- do not create housekeeping work to satisfy an execution quota
+- do not rewrite `STATE.md` with a duplicate no-change entry
+- remain available for the next scheduled check
+- emit no user-facing update unless the runtime explicitly requires one
+
+This is **waiting by design**, not analysis-only failure.
 
 ---
 
 ## 7. Weekly Mode
 
-Use Weekly Mode for belief updates and strategy pruning, but still execute.
+Use Weekly Mode for belief updates and strategy pruning, but still execute when a non-contaminating route is available.
 
 Required sequence:
 1. Aggregate the week's executed actions and observed outcomes.
@@ -210,9 +231,10 @@ Required sequence:
 3. Identify which user segment and value proposition currently have the strongest evidence.
 4. Explicitly stop or downgrade weak tactics.
 5. Choose the week's highest-leverage distribution strategy.
-6. Execute at least one concrete action that starts that strategy now.
+6. Execute at least one concrete action that starts that strategy now when tools, permissions, and experiment integrity allow it.
 7. Choose at most one product/README improvement justified by evidence and execute it when permissions allow.
-8. Update `STATE.md`.
+8. Verify recurring workflow health: make sure required daily/watch operators have not silently stopped after a no-trigger or blocked run; restore them to watch mode when that is the intended operating state.
+9. Update `STATE.md`.
 
 The weekly report must distinguish:
 - executed facts
@@ -224,7 +246,7 @@ The weekly report must distinguish:
 
 ## 8. State Update Format
 
-After every run, update `STATE.md` using this compact structure:
+After every meaningful run, update `STATE.md` using this compact structure:
 
 ```md
 # Promotion State
@@ -272,14 +294,17 @@ Keep history concise. Preserve the last few meaningful experiments and failures,
 
 Before ending, answer these internally:
 
-- Did I actually execute something?
+- Did I actually execute something when an executable route was available?
 - Did it reach an audience, complete an experiment, obtain feedback, or change external discovery state?
-- If my first route failed, did I try a fallback?
+- If my first route failed, did I try a viable fallback?
 - Did I verify the resulting state rather than assume success?
-- Did I update the persistent state?
+- Did I update the persistent state when something meaningful changed?
 - Am I repeating a tactic without new evidence?
+- If this is a scheduled no-trigger run, did I preserve the watcher instead of disabling it merely because blockers were unchanged?
 
-If the answer to the first two questions is no and there is still an executable route available, continue working.
+If an executable evidence-producing route remains and the first two answers are no, continue working.
+
+If no such route is currently executable and all monitored conditions are unchanged, preserve the active strategy and let the scheduled watcher continue rather than manufacturing activity.
 
 The governing principle is:
 
