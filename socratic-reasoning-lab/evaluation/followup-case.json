@@ -1,0 +1,5 @@
+{
+  "id": "P1-update",
+  "phase": "Additional sequential update check; not part of the predeclared three-condition comparison",
+  "prompt": "The existing logs are now reconciled. Old cohort: webinar 56/80 activated, ads 5/20. New cohort: webinar 14/20 activated, ads 30/80. These match the totals already supplied. No change in the activation event definition was found. No additional data establishes random assignment or controls other changes. Update your earlier recommendation. What changed in your view, what remains unresolved, and should the PM still roll back solely because 61% fell to 44%? Keep it under 200 words."
+}

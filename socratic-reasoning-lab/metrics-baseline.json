@@ -1,0 +1,15 @@
+{
+  "observed_at_utc": "2026-10-04T15:09:00Z",
+  "repository": "OakcoderX/awesome-agent-skills",
+  "repository_stars": 1,
+  "repository_forks": 1,
+  "repository_releases": 0,
+  "variant_downloads": null,
+  "variant_installs": null,
+  "variant_positive_user_feedback": null,
+  "scope_note": "Repository counts include all contents and predate this variant's branch publication. Not attributable to the variant. null means unavailable/not measured; it is not zero.",
+  "sources": [
+    "https://api.github.com/repos/OakcoderX/awesome-agent-skills",
+    "https://api.github.com/repos/OakcoderX/awesome-agent-skills/releases"
+  ]
+}
