@@ -1,16 +1,27 @@
 # Distribution and measurement
 
-Status: experimental branch; no claim of broad effectiveness or adoption.
+Status: experimental branch. Intended value: help people think through implicit problems with an AI. Human insight gains, better decisions, and superior AI answers have not been established.
 
 ## Ready-to-use descriptions
 
 ### 中文
 
-Socratic Reasoning Lab 把故事诊断中的「提出不同解释、找反例、最小干预、重新检查」扩展到产品、商业、研究论证和分镜。不同领域使用不同判断标准。它允许保留不确定性，也允许决定不改。当前是开放测试的实验版，附合成案例和原始对照输出，欢迎提供失败案例。
+方案感觉不对，却说不清问题在哪？Socratic Reasoning Lab 想帮助你和 AI 一起，把隐含假设、遗漏的解释和真正值得验证的问题说清楚。你可以带着产品、商业、研究或分镜中的困惑，比较证据，再决定一个小的下一步。当前为 MIT 许可的实验版 0.1.0。首轮 21 份模型回答对照大体持平；对人的启发性尚未验证。欢迎记录它让你新看见了什么，也欢迎没有帮助或产生误导的例子。
 
 ### English
 
-Socratic Reasoning Lab adapts competing explanations, counterevidence, minimal intervention, and re-checking to product, business, research, and visual-design reviews. Each domain has its own standards. The experimental skill can recommend gathering evidence or making no change. Synthetic cases and raw comparison outputs are included; failure reports are welcome.
+Something feels wrong with a proposal, but you cannot yet explain why? Socratic Reasoning Lab is designed to help you think it through with an AI: surface implicit assumptions, consider overlooked explanations, and identify what is worth checking next. Bring a product, business, research, or visual-design question and work toward a small next step. This is MIT-licensed experimental version 0.1.0. The first 21-response model comparison was largely tied, and gains in human insight remain untested. Reports of useful new understanding, no benefit, or misleading suggestions are equally welcome.
+
+### One-line descriptions
+
+- 中文：帮助人和 AI 一起想清楚隐含问题的实验性 Skill，适用于产品、商业、研究与视觉设计；实际启发性仍待验证。
+- English: An experimental skill for thinking through implicit problems with an AI, across product, business, research, and visual design; human insight gains remain unvalidated.
+
+### A concrete trial invitation
+
+带一个你觉得「哪里不对」但还说不清的问题，先写下自己的初步理解，再使用 Skill。之后记录：哪个原先没看见的假设或问题变清楚了？能用什么证据检验？也记录没有变化或被误导的地方。请勿公开私人材料。
+
+Bring a question that feels unresolved and write down your initial understanding before using the skill. Afterwards, record any assumption or issue you had overlooked and how you could test it. Keep no-change and misleading cases too. Do not post private source material.
 
 ## Distribution route
 
@@ -24,12 +35,12 @@ Socratic Reasoning Lab adapts competing explanations, counterevidence, minimal i
 
 ## Measure the right thing
 
-The user's growth goals are real downloads/installations and genuine positive feedback. Track these separately:
+The two growth KPIs are **real downloads/installations** and **genuine positive reactions (likes/stars)**. Feedback helps investigate the product's value; it is not a substitute growth KPI. Track these separately:
 
 1. **Verified package downloads**: only from an actual asset counter or other documented source. Source-page views, repository clones, and release count are not downloads.
 2. **Variant-specific installations**: use a provider counter only if it actually identifies this skill and its definition is known. Local test installs are development activity, not adoption.
-3. **Repository stars and forks**: repository-level interest, shared with every other skill in this repository; they cannot be attributed to this new variant.
-4. **Qualified feedback**: a real task, version, output, and observed useful or failed behavior. Do not count a model's synthetic test as a real user success.
+3. **Genuine likes/stars**: count a surface's actual reactions only when observable. Repository stars are shared with every other skill in this repository and cannot be attributed to this variant. Forks are context, not the requested likes KPI.
+4. **Qualified feedback (research evidence, not a growth KPI)**: a real task, version, output, initial understanding, and observed useful or failed behavior. Keep perceived insight separate from checked accuracy and actual outcomes. Do not count a model's synthetic test as a real human success.
 
 The starting repository snapshot is in [metrics-baseline.json](metrics-baseline.json). Unknown counts are null, not zero. No release assets existed at the snapshot, so release-download counts do not measure this skill's distribution. GitHub does not provide a per-folder star count.
 
@@ -41,9 +52,11 @@ Do not infer a causal promotional lift from before/after totals. Record the surf
 - Skill version or commit:
 - Model and client:
 - Input scope and privacy-safe excerpt:
-- Expected decision:
+- Expected decision and initial understanding:
 - Actual response:
-- What helped or failed:
+- Previously unnoticed assumption or question, if any:
+- Evidence that could check that new understanding:
+- What helped, changed nothing, or misled you:
 - Whether an external action or real-world outcome was observed:
 
 Before wider promotion, collect trials that include disagreement, no-change outcomes, conflicting evidence, and tasks outside the four adapters. Retain negative results alongside positive ones.
