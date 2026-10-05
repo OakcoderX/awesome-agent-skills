@@ -4,12 +4,12 @@ description: Operate and improve promotion for Socratic Story Cartographer throu
 license: MIT
 metadata:
   author: Solopup.co
-  version: "0.2"
+  version: "0.3"
 ---
 
 # Socratic Story Promotion Operator
 
-Version: 0.2
+Version: 0.3
 
 ## 0. Mission
 
@@ -241,6 +241,19 @@ The weekly report must distinguish:
 - observed evidence
 - hypotheses
 - next commitments
+
+### 7.1 Deadlock Escape
+
+If seven full days pass with no external progress and all monitored blockers are unchanged, treat the stagnation itself as evidence.
+
+In that weekly run:
+- research exactly one new high-quality distribution or registry route
+- prefer a route that accepts a public GitHub skill-directory or SKILL.md URL
+- verify that the Skill is not already listed before attempting submission
+- attempt the route only when an authorized non-interactive path is available
+- if human authentication, payment, CAPTCHA, or account-owner action is required, record only the smallest handoff
+- do not research a second new route in the same seven-day window
+- wait another seven no-progress days before opening another discovery route unless new evidence changes the plan
 
 ---
 
