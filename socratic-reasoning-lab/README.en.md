@@ -18,7 +18,7 @@ This is a separate development branch and skill folder in the existing repositor
 - **A shot sequence lacks motivation**: what in the shots actually conveys the character's hesitation?
 - **A decision hides an assumption**: do more signups justify rolling out the new page?
 
-**[Copy one complete example and try it →](FIRST-TRY.en.md)** · [Install](#install)
+**[Copy one complete example and try it →](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.en.md)** · [Install](#install)
 
 Three original fictional examples include things to check, so you do not need to bring private material first. They are not evidence of effectiveness.
 

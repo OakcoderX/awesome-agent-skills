@@ -18,7 +18,7 @@
 - **分镜动作没有动机**：想表达人物犹豫，镜头里实际给到了什么？
 - **决定藏着假设**：注册人数变多，就足够支持全面上线吗？
 
-**[复制一个完整小例子开始试用 →](FIRST-TRY.md)** · [安装](#安装)
+**[复制一个完整小例子开始试用 →](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.md)** · [安装](#安装)
 
 三个原创虚构例子都附了可检查的要点，不需要你先准备私人材料；它们不是效果证明。
 
