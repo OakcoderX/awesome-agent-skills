@@ -12,6 +12,16 @@
 
 这是同一仓库中的独立开发分支与独立 Skill 目录，并非新的 GitHub fork 仓库。原小说 Skill 保持不变。实验版通过分支提供，尚未合并进 main。
 
+## 先选一个具体问题
+
+- **说不清卡在哪里**：一次延期究竟需要更多提醒，还是先解决验收分歧？
+- **分镜动作没有动机**：想表达人物犹豫，镜头里实际给到了什么？
+- **决定藏着假设**：注册人数变多，就足够支持全面上线吗？
+
+**[复制一个完整小例子开始试用 →](FIRST-TRY.md)** · [安装](#安装)
+
+三个原创虚构例子都附了可检查的要点，不需要你先准备私人材料；它们不是效果证明。
+
 ## 想清楚哪些问题
 
 - 产品：「用户不继续用了，我怎么知道该改需求、流程，还是先查数据？」
@@ -27,7 +37,7 @@
 
 先阅读 [SKILL.md](SKILL.md) 和 references，确认来源和权限边界，再选择安装方式。
 
-支持 Skills CLI 的环境：
+需要 Node.js、npm，以及支持 Skills 的 agent。以下命令用于 macOS / Linux 的 bash 或 zsh；在项目目录中运行，并在安装器里选择要使用的 agent：
 
 ```bash
 DISABLE_TELEMETRY=1 npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/socratic-reasoning-lab-v0.1/socratic-reasoning-lab
@@ -37,7 +47,11 @@ DISABLE_TELEMETRY=1 npx skills add https://github.com/OakcoderX/awesome-agent-sk
 
 或者把本目录完整复制到所用 agent 支持的 Skill 目录。保留 SKILL.md 和 references 的相对位置。在 agent 中确认能发现名称 `socratic-reasoning-lab`。
 
-本次只验证了文件结构与指令行为；没有验证每种客户端的自动发现或实际安装流程。不同客户端的 Skill 支持可能不同。
+如果只想先检查 CLI 能发现什么，可在同一命令末尾加 `--list`；这不会安装 Skill。安装后在同一目录运行 `DISABLE_TELEMETRY=1 npx skills list`，确认有 `socratic-reasoning-lab`，再让 agent 确认加载了实际的 SKILL.md。列表出现不等于 agent 已成功加载。
+
+Windows PowerShell 可先运行 `$env:DISABLE_TELEMETRY='1'`，再运行上面以 `npx skills add` 开始的部分。没有 Node.js / npm 时，使用完整目录复制方式。
+
+命令的分支与子目录形式已对照 [Skills CLI 官方源码说明](https://github.com/vercel-labs/skills#source-formats)，并与本分支的文件结构核对。本次未运行客户端安装或跨客户端自动发现测试；不同客户端的支持可能不同。
 
 ## 第一次使用
 

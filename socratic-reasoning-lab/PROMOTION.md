@@ -17,6 +17,17 @@ Something feels wrong with a proposal, but you cannot yet explain why? Socratic 
 - 中文：帮助人和 AI 一起想清楚隐含问题的实验性 Skill，适用于产品、商业、研究与视觉设计；实际启发性仍待验证。
 - English: An experimental skill for thinking through implicit problems with an AI, across product, business, research, and visual design; human insight gains remain unvalidated.
 
+### Three specific entry points
+
+- 中文：说不清团队任务为何卡住？先用一个延期记录检查「提醒不足」和「验收分歧」两种解释。
+- English: Cannot explain why a task stalled? Try a short task record to distinguish missing reminders from conflicting acceptance criteria.
+- 中文：分镜里的人物动作缺乏动机？检查作者知道的犹豫，在镜头表里是否真的可见。
+- English: Does a character's action feel unmotivated? Check whether the hesitation known to the author is actually conveyed by the shot list.
+- 中文：注册人数增加就该上线吗？用一个小例子拆开人数、比例与流量来源。
+- English: Do more signups justify rollout? Use a small example to separate counts, rates, and traffic mix.
+
+Link to the [Chinese first try](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.md) or [English first try](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.en.md), so a visitor has complete input and installation guidance. These are fictional usage examples, not observed customer results. Include “experimental 0.1.0, not yet merged into main; benefits remain unproven” with any standalone invitation.
+
 ### A concrete trial invitation
 
 带一个你觉得「哪里不对」但还说不清的问题，先写下自己的初步理解，再使用 Skill。之后记录：哪个原先没看见的假设或问题变清楚了？能用什么证据检验？也记录没有变化或被误导的地方。请勿公开私人材料。

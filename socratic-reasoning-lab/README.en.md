@@ -12,6 +12,16 @@ A derivative of [Socratic Story Cartographer v2.2](https://github.com/OakcoderX/
 
 This is a separate development branch and skill folder in the existing repository, not a new GitHub fork repository. The original story skill remains unchanged. The experimental branch is not yet merged into main.
 
+## Start with a concrete question
+
+- **You cannot name the problem yet**: does a late task need more reminders, or agreement on acceptance criteria?
+- **A shot sequence lacks motivation**: what in the shots actually conveys the character's hesitation?
+- **A decision hides an assumption**: do more signups justify rolling out the new page?
+
+**[Copy one complete example and try it →](FIRST-TRY.en.md)** · [Install](#install)
+
+Three original fictional examples include things to check, so you do not need to bring private material first. They are not evidence of effectiveness.
+
 ## Questions to think through
 
 - Product: "People stop using this. Should I rethink the need, change the flow, or check the measurement first?"
@@ -25,7 +35,7 @@ The method transfers; the domain criteria do not. Simple questions should still 
 
 Review [SKILL.md](SKILL.md) and the references before installing.
 
-For environments supporting the Skills CLI:
+You need Node.js, npm, and an agent that supports skills. Run this in your project directory with bash or zsh on macOS / Linux, then select your agent in the installer:
 
 ```bash
 DISABLE_TELEMETRY=1 npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/socratic-reasoning-lab-v0.1/socratic-reasoning-lab
@@ -35,7 +45,11 @@ The environment variable disables the installer CLI’s anonymous telemetry; the
 
 Alternatively, copy this complete folder into your agent's supported skill directory. Preserve the relative paths and confirm that `socratic-reasoning-lab` is discoverable.
 
-File structure and instruction behavior were checked in this development pass. End-to-end installation and automatic discovery across clients were not tested.
+To check what the CLI discovers first, append `--list` to the same command; it does not install the skill. After installation, run `DISABLE_TELEMETRY=1 npx skills list` in the same directory and look for `socratic-reasoning-lab`. Then ask your agent to confirm the actual SKILL.md it loaded. A listing alone does not establish successful loading.
+
+In Windows PowerShell, run `$env:DISABLE_TELEMETRY='1'`, then run the portion above beginning with `npx skills add`. Without Node.js / npm, use the complete-folder copy route.
+
+The branch/subdirectory command form was checked against the [official Skills CLI source documentation](https://github.com/vercel-labs/skills#source-formats) and this branch's file structure. Client installation and cross-client automatic discovery were not run in this pass; support varies by client.
 
 ## First run
 
