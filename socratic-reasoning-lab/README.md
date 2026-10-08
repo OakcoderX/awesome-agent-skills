@@ -22,6 +22,8 @@
 
 三个原创虚构例子都附了可检查的要点，不需要你先准备私人材料；它们不是效果证明。
 
+还没安装？如果 agent 能完整读取公开 GitHub 文件，可先按 [免安装试用](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.md#免安装试用) 在本次对话加载实际指令和所需参考文件。读不到就停止；这不代表已安装或已验证客户端兼容性。
+
 ## 想清楚哪些问题
 
 - 产品：「用户不继续用了，我怎么知道该改需求、流程，还是先查数据？」

@@ -6,11 +6,35 @@
 
 ## 开始前
 
-1. 按 [README](README.md) 安装完整目录，并确认 agent 能发现 `socratic-reasoning-lab`。先让 agent 报出实际加载的 SKILL.md 路径；如果不能访问，就停在安装排查，不假装已经启用。
+1. 选一种准备方式：已安装的用户按 [README](README.md) 确认实际加载的 SKILL.md 路径；还没安装且 agent 能读取公开文件的用户，可用下面的免安装启动文本。读不到指令就停止排查，不假装已经启用。
 2. 先选下面一个例子，花一句话写下你自己的初步判断。
 3. 将该例子的整个文本框复制给 agent。读完后检查：哪一个假设变清楚了？下一步能验证什么？没有帮助也照实记录。
 
-这些例子不需要联网、额外账号或对外操作。不要把模型预测的效果当成真实观察。
+不要把模型预测的效果当成真实观察。
+
+## 免安装试用
+
+如果你的 agent 能用读取工具完整读取公开 GitHub 文件，可以先试这个仅限本次对话的方式，无需 Node.js、npm 或本地安装。先阅读下面链接的指令，认可后再把启动文本复制给 agent；等它确认实际读到文件，再发下方任意一个例子的完整文本框。
+
+这会把公开指令作为本次对话的上下文，不会把 Skill 安装到客户端，也不会建立自动发现。链接固定到同一个 0.1.0 提交，避免一次试用混用版本。客户端若读不到全文或所需参考文件，就停止；可改用 [完整安装方式](README.md#安装)。仅打开链接或模型说“已启用”都不足以证明读取成功，应检查读取工具返回的内容和来源。
+
+```text
+请只在本次对话中使用以下公开 Skill 的指令，不安装、不写文件。
+
+先用读取工具完整读取 SKILL.md：
+https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/SKILL.md
+
+如果无法实际读取全文，请说明哪个文件不可用并停止；不要凭名称、搜索摘要或记忆补出指令。
+
+我接下来会发一个虚构例子。分析前，只完整读取该例子需要的参考文件：
+- 团队任务／注册页例子：https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/product.md
+- 分镜例子：https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/visual-design.md
+- 注册页的数字比较，或 Skill 要求检查证据覆盖范围时，还需读取：https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/evidence-and-coverage.md
+
+确认文件中的名称和版本，列出实际读取过的完整来源链接。说明这只是本次对话使用，没有安装，也不代表客户端已自动发现 Skill。先等我发例子再分析。不要运行命令、发布内容或联系他人。
+```
+
+试用需要读取上面的公开文件，但不需要额外账号；案例分析本身不需要联网查资料或对外操作。客户端兼容性与真实用户效果尚未验证。
 
 ## 例子 1：还说不清问题在哪里
 

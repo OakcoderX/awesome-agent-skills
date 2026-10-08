@@ -6,11 +6,35 @@ These are original fictional examples for learning how experimental version 0.1.
 
 ## Before you start
 
-1. Follow the [README](README.en.md) to install the complete folder and confirm your agent can discover `socratic-reasoning-lab`. Ask it to report the actual SKILL.md path it loaded. If it cannot access the file, resolve installation first rather than pretending the skill is active.
+1. Choose a setup route: if installed, follow the [README](README.en.md) and confirm the actual SKILL.md path loaded. If not installed and your agent can read public files, use the session-only bootstrap below. Stop if the instructions are inaccessible rather than pretending the skill is active.
 2. Pick one example and write one sentence with your own initial judgment.
 3. Copy its whole text block into your agent. Afterwards, ask: which assumption became clearer, and what could we check next? Record no benefit honestly.
 
-These examples need no browsing, extra accounts, or external actions. A model's predicted effect is not an observed result.
+A model's predicted effect is not an observed result.
+
+## Try without installing
+
+If your agent has a reading tool that can retrieve complete public GitHub files, you can try this session-only route without Node.js, npm, or a local installation. Review the linked instructions first. If you want to use them, copy the bootstrap below; after the agent confirms the actual read, send the complete text block of any example below.
+
+This adds the public instructions to this conversation's context. It does not install a skill or establish automatic discovery. The links pin one 0.1.0 commit so a trial does not mix versions. If a required file cannot be read in full, stop and use the [complete installation route](README.en.md#install) instead. Opening a link or saying “enabled” is not proof of reading; check the reading tool's returned content and sources.
+
+```text
+Use the instructions from this public skill for this conversation only. Do not install anything or write files.
+
+First, use a reading tool to read the full SKILL.md:
+https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/SKILL.md
+
+If you cannot actually read the complete file, say which file is unavailable and stop. Do not reconstruct its instructions from the name, a search snippet, or memory.
+
+I will send one fictional example next. Before analyzing it, read only its required reference files in full:
+- Team task / signup-page example: https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/product.md
+- Shot-list example: https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/visual-design.md
+- Also read this for the numerical signup-page example, or if the skill requires an evidence-coverage check: https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/evidence-and-coverage.md
+
+Confirm the name and version found in the file and list the exact sources you actually read. Say this is session-only use, not an installation or automatic skill discovery. Wait for my example before analyzing. Do not run commands, publish, or contact people.
+```
+
+This route reads the public files above but needs no extra account. The fictional case itself needs no web research or external action. Cross-client compatibility and real-user outcomes remain untested.
 
 ## Example 1: you cannot name the problem yet
 

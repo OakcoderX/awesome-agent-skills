@@ -22,6 +22,8 @@ This is a separate development branch and skill folder in the existing repositor
 
 Three original fictional examples include things to check, so you do not need to bring private material first. They are not evidence of effectiveness.
 
+Not installed yet? If your agent can read complete public GitHub files, [try the session-only route](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.en.md#try-without-installing) to load the actual instructions and required references in this conversation. Stop if they cannot be read. This is not an installation or proof of client compatibility.
+
 ## Questions to think through
 
 - Product: "People stop using this. Should I rethink the need, change the flow, or check the measurement first?"
