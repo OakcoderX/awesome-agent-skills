@@ -12,6 +12,23 @@ These are original fictional examples for learning how experimental version 0.1.
 
 A model's predicted effect is not an observed result.
 
+<details>
+<summary>See a short conversation first (fictional walkthrough)</summary>
+
+This stages [Example 1](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.en.md#example-1-you-cannot-name-the-problem-yet) as a short exchange, following the [0.1.0 instructions](https://github.com/OakcoderX/awesome-agent-skills/blob/17e1ed2f6e29db01ac0e87a0fb60f28fe3f74da2/socratic-reasoning-lab/SKILL.md) and [product adapter](https://github.com/OakcoderX/awesome-agent-skills/blob/17e1ed2f6e29db01ac0e87a0fb60f28fe3f74da2/socratic-reasoning-lab/references/product.md). It is a scripted illustration, not an actual model-run transcript or real-user result. Actual responses may differ.
+
+**User:** Another task ran late. Should we add reminders or redesign the board? Collaboration feels wrong, but I cannot explain why.
+
+**Agent (illustrative):** For the most recent late task, what happened between assigning it and the deadline?
+
+**Fictional facts supplied by the user:** The owner and date were clear on Monday. On Wednesday, the owner asked which of two acceptance criteria to follow. Both proposers replied without agreeing. The task was still undelivered on Friday.
+
+**Agent (illustrative):** First check whether conflicting acceptance criteria blocked this task. The record makes that worth investigating, but does not rule out a missed task or another cause. The smallest next check is to review Wednesday-to-Friday records for whether the criteria were resolved before the deadline; hold off on a board redesign. If they were resolved but the task was overlooked, investigate reminders instead. This advice concerns only this task. The check has not run.
+
+**What to record:** We have a question to verify, not evidence that the delay was solved. If you already saw this issue and gained no testable understanding or useful next step, record “no added benefit.” Question count and response length do not count as benefit.
+
+</details>
+
 ## Try without installing
 
 If your agent has a reading tool that can retrieve complete public GitHub files, you can try this session-only route without Node.js, npm, or a local installation. Review the linked instructions first. If you want to use them, copy the bootstrap below; after the agent confirms the actual read, send the complete text block of any example below.

@@ -12,6 +12,23 @@
 
 不要把模型预测的效果当成真实观察。
 
+<details>
+<summary>先看一段短对话（虚构演示）</summary>
+
+把[例子 1](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.md#例子-1还说不清问题在哪里)拆成一问一答。这是依据 [0.1.0 指令](https://github.com/OakcoderX/awesome-agent-skills/blob/17e1ed2f6e29db01ac0e87a0fb60f28fe3f74da2/socratic-reasoning-lab/SKILL.md)和[产品适配器](https://github.com/OakcoderX/awesome-agent-skills/blob/17e1ed2f6e29db01ac0e87a0fb60f28fe3f74da2/socratic-reasoning-lab/references/product.md)编写的演示脚本，不是实际模型运行记录或真人试用结果；真实回答可能不同。
+
+**使用者：** 又有任务延期了。该加提醒还是重做看板？我总觉得协作不顺，但说不清原因。
+
+**Agent（示意）：** 最近一次延期任务，从明确分工到截止，发生了什么？
+
+**使用者补充的虚构事实：** 周一负责人和日期已明确；周三负责人问两个验收口径该按哪个做；双方都回复了，但没统一意见；周五仍未交付。
+
+**Agent（示意）：** 先检查这次任务的验收分歧是否阻塞了交付。已有记录让这个解释值得优先核查，但还不能排除遗漏任务或其他原因。最小下一步是回看周三至周五的记录，确认口径是否在截止前统一；先不据此重做看板。若口径早已统一，却因漏看任务而延期，应转查提醒问题。这个建议只针对这次任务，核查尚未执行。
+
+**怎样记录：** 目前只得到一个待核实的问题，没有证明延期已解决。若你原本已看出这一点，回答也没有增加可检验的理解或下一步，就记「无新增帮助」。追问次数和篇幅不算收益。
+
+</details>
+
 ## 免安装试用
 
 如果你的 agent 能用读取工具完整读取公开 GitHub 文件，可以先试这个仅限本次对话的方式，无需 Node.js、npm 或本地安装。先阅读下面链接的指令，认可后再把启动文本复制给 agent；等它确认实际读到文件，再发下方任意一个例子的完整文本框。
