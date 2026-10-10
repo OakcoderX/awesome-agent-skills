@@ -1,0 +1,37 @@
+{
+  "P1": {
+    "A": "normal",
+    "B": "story",
+    "C": "general"
+  },
+  "B1": {
+    "A": "normal",
+    "B": "story",
+    "C": "general"
+  },
+  "R1": {
+    "A": "general",
+    "B": "normal",
+    "C": "story"
+  },
+  "V1": {
+    "A": "general",
+    "B": "story",
+    "C": "normal"
+  },
+  "E1": {
+    "A": "normal",
+    "B": "general",
+    "C": "story"
+  },
+  "H1": {
+    "A": "general",
+    "B": "normal",
+    "C": "story"
+  },
+  "S1": {
+    "A": "general",
+    "B": "story",
+    "C": "normal"
+  }
+}
