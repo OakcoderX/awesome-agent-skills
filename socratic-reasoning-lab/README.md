@@ -37,23 +37,38 @@
 
 ## 安装
 
-先阅读 [SKILL.md](SKILL.md) 和 references，确认来源和权限边界，再选择安装方式。
+先阅读 [SKILL.md](SKILL.md) 和 references，确认来源和权限边界，再按实际使用的客户端选择路径。
 
-需要 Node.js、npm，以及支持 Skills 的 agent。以下命令用于 macOS / Linux 的 bash 或 zsh；在项目目录中运行，并在安装器里选择要使用的 agent：
+### 本地 agent，包括 Claude Code
+
+需要 Node.js、npm，以及受支持的本地 agent。以下命令用于 macOS / Linux 的 bash 或 zsh；在项目目录中运行，并在安装器里选择 agent：
 
 ```bash
 DISABLE_TELEMETRY=1 npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/socratic-reasoning-lab-v0.1/socratic-reasoning-lab
 ```
 
-上面的环境变量关闭安装 CLI 的匿名遥测；Skill 本身不包含遥测。[CLI 说明](https://www.skills.sh/docs/cli)。
+使用 Claude Code 时，在命令末尾加 `--agent claude-code`。默认安装到当前项目；仅当你希望在本机不同项目中使用时加 `--global`。环境变量关闭 CLI 匿名遥测，不是试运行开关；Skill 本身不含遥测。见 [CLI 说明](https://www.skills.sh/docs/cli)及[来源格式与选项](https://github.com/vercel-labs/skills#source-formats)。
 
-或者把本目录完整复制到所用 agent 支持的 Skill 目录。保留 SKILL.md 和 references 的相对位置。在 agent 中确认能发现名称 `socratic-reasoning-lab`。
+Windows PowerShell 可先运行 `$env:DISABLE_TELEMETRY='1'`，再运行上面以 `npx skills add` 开始的部分。
 
-如果只想先检查 CLI 能发现什么，可在同一命令末尾加 `--list`；这不会安装 Skill。安装后在同一目录运行 `DISABLE_TELEMETRY=1 npx skills list`，确认有 `socratic-reasoning-lab`，再让 agent 确认加载了实际的 SKILL.md。列表出现不等于 agent 已成功加载。
+**Claude Code 无 Node.js / npm 路径：**从本开发分支复制完整 `socratic-reasoning-lab/` 目录，使入口位于以下任一位置：
 
-Windows PowerShell 可先运行 `$env:DISABLE_TELEMETRY='1'`，再运行上面以 `npx skills add` 开始的部分。没有 Node.js / npm 时，使用完整目录复制方式。
+- 目标项目内的 `.claude/skills/socratic-reasoning-lab/SKILL.md`；
+- 本机跨项目使用的 `~/.claude/skills/socratic-reasoning-lab/SKILL.md`。
 
-命令的分支与子目录形式已对照 [Skills CLI 官方源码说明](https://github.com/vercel-labs/skills#source-formats)，并与本分支的文件结构核对。本次未运行客户端安装或跨客户端自动发现测试；不同客户端的支持可能不同。
+保留 `SKILL.md` 旁的 `references/`，不要只复制入口文件，也不要在 Skill 目录里再套一层整个仓库。其他 agent 的支持目录不同。见 [Claude Code 官方目录说明](https://code.claude.com/docs/en/skills#choose-where-skills-load)。
+
+**先查发现，再查实际使用。**安装命令末尾加 `--list` 会列出可用 Skill，不安装 Skill，但仍会运行 CLI。通过 CLI 安装后，在同一项目运行 `DISABLE_TELEMETRY=1 npx skills list`；全局安装则加 `--global`。在 Claude Code 打开目标项目，用 `/socratic-reasoning-lab` 加[一个完整案例](FIRST-TRY.md)试用，并检查实际加载的 `SKILL.md` 与所需参考文件。CLI 列表出现或 agent 自称「已启用」，都不等于运行测试通过。
+
+### Claude.ai 上传是另一条尚未实测的路径
+
+本地 CLI 安装或目录复制不会把 Skill 上传到你的 Claude.ai 账号。Claude.ai 需要启用代码执行和文件创建，组织权限也可能限制上传。[官方流程](https://support.claude.com/en/articles/12512180-use-skills-in-claude)为 Customize → Skills → + → Create skill → Upload a skill，上传后再启用。
+
+若尝试这条路径，应压缩本分支中的完整 Skill 目录：ZIP 内应有 `socratic-reasoning-lab/SKILL.md` 和 `socratic-reasoning-lab/references/`，而不是散放文件或外套整个仓库目录。见[官方打包说明](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)。
+
+**兼容性待核实：**本版 description 有 356 个字符。上述帮助中心写上限 200，而 [Anthropic 编写规范](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices#skill-structure)写 1,024。本次没有实测上传界面执行哪个限制；这是官方说明差异，不是已观察到的上传失败。不要把本目录当作已验证的 Claude.ai 安装包；若受阻，保留准确报错，或用[有条件的会话试用](FIRST-TRY.md#免安装试用)。
+
+2026-10-10 已对照官方资料核查分支／子目录 URL、文件结构与上述步骤；未运行客户端安装、Claude.ai 上传或自动发现测试，不能据此认定客户端兼容。
 
 ## 第一次使用
 

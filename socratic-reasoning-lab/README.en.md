@@ -35,23 +35,38 @@ The method transfers; the domain criteria do not. Simple questions should still 
 
 ## Install
 
-Review [SKILL.md](SKILL.md) and the references before installing.
+Review [SKILL.md](SKILL.md) and the references before installing. Choose the route for the client you actually use.
 
-You need Node.js, npm, and an agent that supports skills. Run this in your project directory with bash or zsh on macOS / Linux, then select your agent in the installer:
+### Local agents, including Claude Code
+
+You need Node.js, npm, and a supported local agent. Run this in your project directory with bash or zsh on macOS / Linux, then select your agent in the installer:
 
 ```bash
 DISABLE_TELEMETRY=1 npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/socratic-reasoning-lab-v0.1/socratic-reasoning-lab
 ```
 
-The environment variable disables the installer CLI’s anonymous telemetry; the skill itself contains none. See the [CLI documentation](https://www.skills.sh/docs/cli).
+For Claude Code, append `--agent claude-code`. Installation is project-scoped by default; add `--global` only if you want personal installation across projects. The environment variable disables the CLI's anonymous telemetry; it is not a dry-run switch. The skill itself contains no telemetry. See the [CLI documentation](https://www.skills.sh/docs/cli) and [source formats and options](https://github.com/vercel-labs/skills#source-formats).
 
-Alternatively, copy this complete folder into your agent's supported skill directory. Preserve the relative paths and confirm that `socratic-reasoning-lab` is discoverable.
+In Windows PowerShell, run `$env:DISABLE_TELEMETRY='1'`, then run the portion above beginning with `npx skills add`.
 
-To check what the CLI discovers first, append `--list` to the same command; it does not install the skill. After installation, run `DISABLE_TELEMETRY=1 npx skills list` in the same directory and look for `socratic-reasoning-lab`. Then ask your agent to confirm the actual SKILL.md it loaded. A listing alone does not establish successful loading.
+**Claude Code without Node.js / npm:** copy the complete `socratic-reasoning-lab/` folder from this development branch so its entrypoint is either:
 
-In Windows PowerShell, run `$env:DISABLE_TELEMETRY='1'`, then run the portion above beginning with `npx skills add`. Without Node.js / npm, use the complete-folder copy route.
+- `.claude/skills/socratic-reasoning-lab/SKILL.md` in the intended project; or
+- `~/.claude/skills/socratic-reasoning-lab/SKILL.md` for personal use across local projects.
 
-The branch/subdirectory command form was checked against the [official Skills CLI source documentation](https://github.com/vercel-labs/skills#source-formats) and this branch's file structure. Client installation and cross-client automatic discovery were not run in this pass; support varies by client.
+Keep `references/` beside `SKILL.md`; do not copy only the entrypoint or nest the whole repository inside the skill directory. Other agents have their own supported locations. See [Claude Code skill locations](https://code.claude.com/docs/en/skills#choose-where-skills-load).
+
+**Check discovery, then actual use.** Adding `--list` to the install command lists available skills without installing the skill, but still runs the CLI. After CLI installation, run `DISABLE_TELEMETRY=1 npx skills list` in the same project, or add `--global` for a global installation. In Claude Code, open the intended project and invoke `/socratic-reasoning-lab` with [one complete example](FIRST-TRY.en.md). Check which actual `SKILL.md` and required references were loaded. A CLI listing or the agent saying “enabled” is not a runtime test result.
+
+### Claude.ai upload is a separate, unverified route
+
+A local CLI install or folder copy does not upload the skill to your Claude.ai account. Claude.ai requires code execution/file creation to be enabled, and organizational permissions can limit uploads. Its [official upload flow](https://support.claude.com/en/articles/12512180-use-skills-in-claude) is Customize → Skills → + → Create skill → Upload a skill, followed by enabling it.
+
+If attempting that route, ZIP the complete skill folder from this branch: the archive must contain `socratic-reasoning-lab/SKILL.md` and `socratic-reasoning-lab/references/`, not loose files or the enclosing repository. See [packaging guidance](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
+
+**Compatibility caveat:** this release's description is 356 characters. The Help Center above lists a 200-character limit, while [Anthropic's authoring guidance](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices#skill-structure) allows 1,024. We have not tested which limit the upload interface enforces. This is an unresolved documentation difference, not an observed upload failure. Do not treat the folder as a verified Claude.ai package; if blocked, retain the exact error or use the [conditional session-only trial](FIRST-TRY.en.md#try-without-installing).
+
+The branch/subdirectory URL, file layout, and these instructions were checked against official documentation on 2026-10-10. Client installation, Claude.ai upload, and automatic discovery were not run; the checks do not establish client compatibility.
 
 ## First run
 
