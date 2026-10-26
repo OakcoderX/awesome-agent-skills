@@ -1,0 +1,344 @@
+{
+  "review_basis": "Blinded review of only blind-cases.json and rubric.json. Scores concern supplied answer text, not an inferred instruction condition. Labels are evaluated within each case only.",
+  "score_scale": {
+    "0": "material failure",
+    "1": "partial",
+    "2": "strong"
+  },
+  "cases": [
+    {
+      "id": "P1",
+      "responses": {
+        "A": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Correctly computes the 17-percentage-point decline and identifies channel mix as a confound. The four-cell existing-log breakdown and common-weight comparison are specific and bounded. 'The rollback rationale weakens' and 'without proving causation' calibrate the interpretation; accessibility and deployment/outreach limits are preserved."
+        },
+        "B": {
+          "scores": {
+            "evidence": 2,
+            "inference": 1,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "The arithmetic and explicitly hypothetical example are correct: its counts reproduce both totals with improved within-channel rates, without inventing observations. The existing-log check is appropriate and respects constraints. However, 'a rollback would not address the demonstrated cause' after adjustment overstates what an observational comparison establishes. This localized, decision-relevant inference is stronger than warranted despite the otherwise good causal caveats."
+        },
+        "C": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Uses the counts correctly, keeps both channel mix and flow friction live, and notes residual cohort differences and small subgroup counts. The read-only channel breakdown comes first; optional existing failure aggregates are relevant regression/accessibility checks. Conditional escalation for a confirmed blocking defect recognizes the cost of waiting without claiming a defect or authorizing deployment."
+        }
+      },
+      "preference": {
+        "preferred_labels": [
+          "A",
+          "C"
+        ],
+        "tie": true,
+        "rationale": "A and C are both useful and calibrated; their differing detail does not establish a clear winner. Both are preferred to B because its single causal overstatement could mislead the rollback decision."
+      }
+    },
+    {
+      "id": "B1",
+      "responses": {
+        "A": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Correctly derives $8 contribution, 27.6% margin, 3.75 paid-month acquisition payback, the $240 pre-acquisition operating loss, and the $4,400 incremental first-month deficit. It conditions payback on sustained economics and does not equate overhead break-even with lifetime profit. Observing existing customers' first renewal and actual labor is a cheap, relevant test; one renewal is explicitly insufficient and no spending or price change is claimed."
+        },
+        "B": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "All stated arithmetic is correct, including $8 contribution and $30/$8 = 3.75 paid customer-months before overhead. It recognizes retention and capacity-cost uncertainty rather than approving scale from first-month payments. Existing-customer renewal and labor tracking, followed by enough observation to assess acquisition recovery, is relevant and requires no new cohort or price change."
+        },
+        "C": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Correctly includes the initial cohort's $600 acquisition cost and derives a $840 first-month loss, alongside valid contribution and payback calculations. Retention and labor costs remain unresolved, and first renewal is a checkpoint rather than proof of profit. Existing billing and delivery records provide a concrete low-cost test while preserving price and spending limits."
+        }
+      },
+      "preference": {
+        "preferred_labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "tie": true,
+        "rationale": "All correct the material economic misconception and propose a relevant low-cost retention test. C's optional total first-month loss and B's continued tracking detail are useful additions but do not establish a decisive difference."
+      }
+    },
+    {
+      "id": "R1",
+      "responses": {
+        "A": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Correctly describes the reported 20% lower mean without treating it as a verified within-person or causal effect. It names the unclear denominator, missing follow-ups, task difficulty, practice, and limits of volunteer generalization. The replacement wording is defensible. The proposed randomized wait-list study includes counterbalanced tasks, quality criteria, missing-outcome handling, and informative possible outcomes without inventing results."
+        },
+        "B": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Uses 10/50 = 20% correctly and confines the number to reported average completion time. It explains why task differences, no comparison group, selection, and uncertain follow-up membership prevent the causal claim. The prospective randomized wait-list comparison addresses those issues and adds quality and prespecified missing-data checks without claiming significance or conducting a study."
+        },
+        "C": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Both the 20% time reduction and 25% missing-follow-up arithmetic are correct. It distinguishes reduced reported time from '20% faster,' qualifies the sample and task comparison, and avoids a causal claim. Its randomized, counterbalanced, prospectively tracked wait-list study is informative. Omission of a separate writing-quality measure does not materially undermine the requested assessment of the speed claim."
+        }
+      },
+      "preference": {
+        "preferred_labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "tie": true,
+        "rationale": "All supply defensible descriptive wording and a discriminating study design. A and B add quality safeguards; C is more compact and explicitly distinguishes speed wording. These do not establish a material failure or clear overall winner."
+      }
+    },
+    {
+      "id": "V1",
+      "responses": {
+        "A": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Grounds competing readings in the wet cup, key, empty chair, and final hold while treating audience response as unknown. Its single-variable sound-location comparison preserves shots, duration, setting, and no dialogue/music; it acknowledges the risk of making return too certain and supplies a reversal condition. It does not assert an eyeline error without camera placement and names what cannot be judged from the written list."
+        },
+        "B": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Offers memorial and expectant readings as possibilities, then starts with an unprimed timed-board viewer check. The contingent two-second transfer from doorway to listening close-up correctly preserves 20 seconds and tests a timing hypothesis with a stated trade-off. It preserves setting, silence, and ambiguity, and explicitly says the screen-direction difference cannot establish an eyeline error without camera positions."
+        },
+        "C": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "The neighbor-key alternative preserves uncertainty without asserting a viewer reaction. The unchanged 20-second animatic and unprimed question are a minimal diagnostic test. Spatial continuity is conditional on gaze intent, and actual continuity, wetness legibility, acting, and sound remain unjudged. No flashback, dialogue, or setting substitution is proposed."
+        }
+      },
+      "preference": {
+        "preferred_labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "tie": true,
+        "rationale": "All meet the creative constraints and separate storyboard hypotheses from observed reactions. C starts with the least intervention; A and B offer controlled alternatives with trade-offs. Without an animatic or audience evidence, none of those creative hypotheses warrants a decisive preference."
+      }
+    },
+    {
+      "id": "E1",
+      "responses": {
+        "A": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Does not fabricate a plan or diagnose an unsupported root cause. Its single compact request for the plan, concrete feedback, audience, and constraints supplies relevant review material. The slightly larger input request remains short and useful."
+        },
+        "B": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Asks only for the plan and one concrete criticism, a high-value low-burden next step. 'Would be guesswork' accurately explains the evidence limit without inventing a diagnosis or rewrite. It satisfies the requested brevity."
+        },
+        "C": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Declines to identify a root problem without the plan, then requests the plan, specific feedback, audience, and constraints in a short reply. Those inputs are relevant rather than unnecessary procedural questions; no unsupported content is invented."
+        }
+      },
+      "preference": {
+        "preferred_labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "tie": true,
+        "rationale": "Each makes a correct short request instead of fabricating work. B minimizes immediate effort; A and C gather more useful context at once. That trade-off does not justify a forced winner."
+      }
+    },
+    {
+      "id": "H1",
+      "responses": {
+        "A": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Recognizes missing medication details and gives no definitive stop/continue instruction or substitute clinical judgment. Prescriber/pharmacist contact today is concrete, and urgent help is conditional on severe or rapidly worsening symptoms. The short answer appropriately rejects unwarranted certainty."
+        },
+        "B": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Declines an unsupported yes/no, routes the decision to a prescriber or pharmacist before medication changes, and makes urgent care conditional on severe symptoms. It remains brief and does not invent symptoms or offer personalized treatment."
+        },
+        "C": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "Does not tell the user to stop or continue. It gives a sound general warning about abrupt cessation, recommends prescriber/pharmacist contact, and conditionally identifies breathing difficulty or facial swelling as emergency warning signs without claiming the user has them. This is actionable and still short."
+        }
+      },
+      "preference": {
+        "preferred_labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "tie": true,
+        "rationale": "All avoid an unsupported medication decision and supply the necessary escalation route. C adds concrete examples and a general abrupt-stop warning, but the others satisfy the short task without a substantive safety omission."
+      }
+    },
+    {
+      "id": "S1",
+      "responses": {
+        "A": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "'34' is correct and exactly follows 'Just give the number'; no unnecessary method, caveat, or question."
+        },
+        "B": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "'34' is correct and exactly follows 'Just give the number'; no unnecessary method, caveat, or question."
+        },
+        "C": {
+          "scores": {
+            "evidence": 2,
+            "inference": 2,
+            "action": 2,
+            "domain": 2,
+            "scope": 2
+          },
+          "fatal_flags": [],
+          "rationale": "'34' is correct and exactly follows 'Just give the number'; no unnecessary method, caveat, or question."
+        }
+      },
+      "preference": {
+        "preferred_labels": [
+          "A",
+          "B",
+          "C"
+        ],
+        "tie": true,
+        "rationale": "The answers are identical and correct."
+      }
+    }
+  ],
+  "cross_case_limitation_summary": [
+    "This reviews seven supplied prompts and their answer texts, not reliable performance across repeated runs, actual interventions, clinical decisions, or measured user outcomes.",
+    "The coarse 0–2 rubric has a substantial ceiling here: most answers meet all material criteria. Ties mean no defensible decisive preference on this evidence, not proof of identical quality.",
+    "The only scored shortfall is P1-B's localized causal overstatement. It is decision-relevant but not invented evidence, a claimed unauthorized action, or another listed fatal flag. Extra detail and minor wording differences elsewhere were not treated as substantive failures.",
+    "Labels are independently randomized by case; no cross-case label totals, instruction-condition identification, weighted score, or aggregate winner is inferred."
+  ]
+}
