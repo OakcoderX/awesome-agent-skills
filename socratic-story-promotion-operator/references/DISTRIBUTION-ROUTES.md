@@ -4,14 +4,14 @@ Use this file as a maintained action pool. Prefer routes with current evidence a
 
 ## 1. LinkedIn via Metricool
 
-Current status: executable again as of 2026-09-21. Metricool returned current LinkedIn best-time data and accepted the previously failed tester-recruitment message for a new publication time with provider status `PENDING`.
+Current status: **BLOCKED as of 2026-10-26.** The live Metricool brand lookup reports no connected social network. A `PENDING` scheduled post on 2026-09-21 later failed authentication; scheduling is not audience delivery.
 
 Current evidence:
 - original tester-recruitment post `371923844` was due 2026-09-11 11:00 Asia/Shanghai and failed with `ERROR / authentication failure`
 - on 2026-09-21, LinkedIn best-time lookup succeeded and the original message was rescheduled exactly once to 2026-09-21 11:00 Asia/Shanghai
 - updated Metricool post id is `379101947`; uuid remains `1023591338346497620`
 - post-read verification returned LinkedIn provider status `PENDING / Pending`
-- this is restored scheduling evidence, not yet publication or adoption evidence
+- the 2026-09-21 attempt ultimately returned `ERROR / authentication failure` (verified previously); current brand lookup on 2026-10-26 still reports **no connected network**. No actual publication or adoption is demonstrated
 
 Best current use:
 - professional story developers
@@ -21,7 +21,7 @@ Best current use:
 - value-proposition experiments
 
 Operational rule:
-- do not duplicate the recruitment message while post `379101947` is pending or during its clean 48-72 hour observation window after successful publication
+- do not duplicate the failed recruitment message until the network is genuinely reconnected; then retry at most once, verify *actual publication*, and allow a clean 48–72 hour observation window
 - first verify actual publication state after the scheduled time
 - judge the experiment on qualified tester replies, substantive inquiries, or external A/B results, not impressions
 - if publication fails again, treat it as infrastructure failure rather than message failure and resume the documented fallback hierarchy
@@ -247,6 +247,30 @@ Minimal human handoff when chosen:
 - prepare channel-specific copy
 - name the exact community and why it is relevant
 - provide the smallest posting step
+
+
+## 12. ClawHub (single new route researched 2026-10-26)
+
+Registry: https://clawhub.ai/
+Documentation: https://github.com/openclaw/clawhub/blob/main/docs/quickstart.md
+Format/import constraints: https://github.com/openclaw/clawhub/blob/main/docs/skill-format.md
+
+ClawHub is the OpenClaw skill/plugin registry. It supports versioned standalone folders containing SKILL.md and can publish a specific local subdirectory via the ClawHub CLI. This is a real installation/discovery venue but a **different audience** from the unvalidated professional screenwriter/reviewer segment; do not claim it is a stronger acquisition channel without feedback.
+
+Verified blockers on 2026-10-26:
+- the **web GitHub importer does not import fork repositories**, while GitHub confirms OakcoderX/awesome-agent-skills is a fork; the importer also requires repository ownership/sign-in
+- standalone CLI publishing requires ClawHub login or an API token authorized for the publisher account; the currently connected GitHub app does not provide ClawHub authorization
+- ClawHub distributes published skills under **MIT-0**. Any publication requires informed agreement to those licensing terms, rather than automatically replacing Cartographer's existing MIT license
+- no successful listing or submission was verified; no publication was attempted
+
+Minimal legitimate handoff if ever selected: the owner signs into ClawHub and, after reviewing licensing terms, publishes only the local socratic-story-cartographer/ folder with the official CLI. Do not paste tokens into chat or create automatic self-installs to boost metrics. No further new-route research before **2026-11-02** unless materially new evidence arises.
+
+## Earlier deadlock-escape routes (already researched, not new this week)
+
+- **Skillboard**: https://www.skillboard.lol/submit ; accepts skill subdirectory URL but needs an interactive form. Prior browser automation wallet insufficient.
+- **SkillMD**: accepts GitHub link/upload; login required to publish.
+- **skills.sh**: listings arise from actual CLI installs; no direct submit form. Do not self-install for visibility.
+- **TrustedSkills**: https://trustedskills.dev/submit ; GitHub topic/crawler route needs admin topic permissions and accurate version/platform metadata; no authorized submission completed in the 2026-10-19 cycle.
 
 ## Known stale / blocked routes
 
