@@ -10,9 +10,9 @@ npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socra
 
 The Skills CLI supports many AI harnesses, including Codex, Claude Code, Cursor, OpenCode, and others.
 
-## 2. Give it something real
+## 2. Choose material you can use
 
-Use a piece of writing you already know well: a short story, screenplay episode, scene, or series outline.
+Use a piece of writing you know well and have permission to share with your chosen model, or copy the [original bilingual practice scene](./DEMO.md) without sharing a private manuscript. The practice scene is an input and checklist, not a recorded model test or evidence of improved writing.
 
 Do **not** tell the agent what you already think is wrong.
 

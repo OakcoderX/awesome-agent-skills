@@ -1,5 +1,40 @@
 # Socratic Story Cartographer
 
+[English](./README.en.md) · [中英示例](./DEMO.md) · [第一次试用](./FIRST-TEST.zh.md)
+
+**小说或剧本不知道先改哪里？先检验问题，再动笔。**
+
+Socratic Story Cartographer 会对照原文检验几种不同解释，主动寻找推翻第一判断的证据，再提出一处值得先试的小修改，并说明它可能伤到什么。
+
+## 从这里开始
+
+1. 在支持 Agent Skills 的智能体环境中安装：
+   ```bash
+   npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer
+   ```
+2. 让智能体确认能找到 `socratic-story-cartographer`。安装方法和实际表现取决于当前环境，本项目没有声称所有客户端都已实测。
+3. 提供一段你有权使用的场景；没有现成稿件，可直接复制[完整中英示例](./DEMO.md)。然后输入：
+
+   ```text
+   用 Socratic Story Cartographer 诊断这段场景，最多跑 3 轮。
+   先不改写，只找最值得先改的一处。引用具体文本依据，
+   检验另一种会导向不同修改的解释，并说明建议可能破坏什么。
+   如果下一轮没有新证据或判断变化，就停止。用中文回答。
+   ```
+
+命令格式见 [Skills CLI 官方说明](https://github.com/vercel-labs/skills#install-a-skill)。你仍需可用的智能体和模型；这里提供的是指令包，不是在线写作网站。
+
+## 第一次只看四件事
+
+- 判断能否对应到具体原文
+- 竞争解释是否真的会导向另一种改法
+- 出现反证后，判断是否发生变化
+- 最后是否给出一处可操作的下一步，包括有依据地建议不改
+
+长篇或多文件材料另有[同模型、同材料的 A/B 对照协议](./AB-TEST.md)。短场景示例只供上手，不能证明长篇能力或优于一个好提示词。
+
+可在[现有反馈帖](https://github.com/OakcoderX/awesome-agent-skills/pull/1)留下模型/客户端、材料范围和一条具体观察。无须公开私人稿件或个人信息，也不必只报好结果。
+
 ## 概览
 
 一个面向创作者的叙事诊断 Skill，用苏格拉底式提问支持小说、剧本、片段和多集大纲的初审。

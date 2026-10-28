@@ -1,9 +1,13 @@
 # Socratic Story Cartographer
 
+[English](./README.en.md) · [中文](./README.zh.md) · [Copy a bilingual example / 复制中英示例](./DEMO.md)
+
 **A Socratic story-development skill for novels, screenplays, scenes, and series outlines.**  
 Instead of jumping to a verdict, it runs a loop of competing diagnoses, falsification, counterfactual tests, minimal intervention, and blind re-check to find the highest-leverage problem first.
 
-**New here? [Try the 3-minute first test →](./FIRST-TEST.md)**
+**New here? [Try the first test →](./FIRST-TEST.md) · [中文第一次试用 →](./FIRST-TEST.zh.md)**
+
+No manuscript ready? The [bilingual sample scene](./DEMO.md) gives you a complete input and a short checklist. It is a practice example, not evidence that the Skill outperforms another prompt.
 
 ## Quick start — no terminal required
 
