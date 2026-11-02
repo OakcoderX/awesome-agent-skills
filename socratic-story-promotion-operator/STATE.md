@@ -1,6 +1,6 @@
 # Promotion State
 
-_Last verified: 2026-10-26 (Asia/Shanghai). Distinguish verified observations from hypotheses and internal actions from external adoption._
+_Last verified: 2026-11-02 (Asia/Shanghai). Distinguish verified observations from hypotheses and internal actions from external adoption._
 
 ## Current objective
 Obtain the first **qualified, independent** Socratic Story Cartographer Skill-vs-strong-prompt A/B result. Prioritize real user contact and valid experiment data over stars, directory count, and self-generated commits.
@@ -11,7 +11,7 @@ Obtain the first **qualified, independent** Socratic Story Cartographer Skill-vs
 - **LinkedIn:** plausible relevant professional audience, but **not a valid tested acquisition channel** yet; Metricool authentication has prevented delivery twice.
 - **OpenAgentSkill:** externally listed as `Community listed / Unverified` after static checks; tangible installation/onboarding feedback was addressed on 2026-09-09. No verified downstream adoption.
 - **GitHub:** a public A/B feedback PR exists, but its only observed engagement is from Codex bot; it is a feedback destination, not an acquisition result. Forked monorepo stars are weak adoption evidence.
-- **Registry candidates:** Skillboard has a skill-directory submission form but browser credit is insufficient; SkillMD requires login; skills.sh indexes genuine CLI installs and has no direct submission; TrustedSkills was examined on 2026-10-19 but remains blocked. ClawHub was the single newly researched route on 2026-10-26: this repo is a fork, which ClawHub's web importer excludes, and CLI publishing requires account authorization plus its MIT-0 licensing terms. No publication or adoption claimed.
+- **Registry candidates:** Skillboard has a skill-directory submission form but browser credit is insufficient; SkillMD requires login; skills.sh indexes genuine CLI installs and has no direct submission; TrustedSkills was examined on 2026-10-19 but remains blocked. ClawHub was researched on 2026-10-26; its fork/import and license/auth conditions remain. On 2026-11-02, the sole newly researched route was SkillPass: it supports direct monorepo subdirectory links and owner-only submissions, but requires account sign-in and interactive publish confirmation. No submission or adoption was verified; directory absence could not be confirmed from its dynamic public listing.
 
 ## Active experiment
 - **Hypothesis:** professionals already using AI for long-form narrative review will volunteer for a falsifiable Skill-vs-strong-prompt A/B.
@@ -23,17 +23,19 @@ Obtain the first **qualified, independent** Socratic Story Cartographer Skill-vs
 - **Public result thread:** https://github.com/OakcoderX/awesome-agent-skills/pull/1
 
 ## Previous commitment
-- **Action:** verify known blockers; if seven full no-progress days elapsed, research at most one suitable new discovery route on or after 2026-10-26.
-- **Status:** **EXECUTED (monitoring and one-route research, not adoption).** ClawHub investigated; no authorized unauthenticated publishing path available for this fork.
+- **Action:** verify real audience/adoption signals, keep the Daily watcher live, and if the full seven-day no-progress gate is met research exactly one suitable new route on or after 2026-11-02.
+- **Status:** **EXECUTED (monitoring and one-route research, not acquisition).** SkillPass investigated; publication not attempted because an authenticated owner session and interactive confirmation are required.
 
 ## Latest executed action
-- **Date:** 2026-10-26 (Asia/Shanghai).
-- **Action:** checked live Operator Skill/state/routes, GitHub repo stats and commits, PR #1 human comments, OpenAgentSkill issue #118 and all comments, Metricool brand authentication, and Daily Operator health. Researched exactly one new route: ClawHub.
-- **External adoption/distribution state change:** **none verified**. There is no new human tester, completed independent A/B, published recruitment, or external registry submission. Internal maintenance is not user growth.
-- **Fresh observations:** repository 1 star / 1 fork; latest commit 2026-10-19. GitHub PR #1 remains bot-only (Codex comment 2026-09-14); OpenAgentSkill issue #118 remains closed, five comments, and no maintainer response to the 2026-09-12 ownership question. Metricool brand 6751659 still reports no social network connected, and post 379101947 was previously verified to have failed authentication. This is a **delivery failure**, not a conversion or market-interest test. Daily Promotion Operator enabled; last run 2026-10-25.
-- **One new route:** ClawHub, official OpenClaw skills registry. Web GitHub importer only accepts public **non-fork** repos owned by the signed-in user; GitHub metadata confirms this source repo is a fork. CLI can publish a local Skill subdirectory but needs account login or authenticated token, and publishing applies ClawHub's **MIT-0** license. No listing or publication was attempted. Sources: https://github.com/openclaw/clawhub/blob/main/docs/skill-format.md ; https://github.com/openclaw/clawhub/blob/main/docs/quickstart.md ; https://github.com/openclaw/clawhub/blob/main/docs/publishing.md
-- **Belief update:** no independent evidence supports a segment/value-proposition change. Professional long-form/multi-file story reviewers and coverage → falsification → actionable handoff remain **medium-low confidence**. No evidence-justified Cartographer README/product edit this week.
-- **Fallback:** prior alternative routes remain blocked by login, external GitHub write permissions or interactive browser automation credit; repeated outreach, fake installs or unapproved relicensing would violate the experiment. Accurate state tracking is the only immediately available maintenance.
+- **Date:** 2026-11-02 (Asia/Shanghai).
+- **Action:** loaded live Operator SKILL.md, STATE.md, and route pool; checked GitHub repo/commits, PR #1 human comments, OpenAgentSkill issue #118 and its full five-comment thread, live Metricool brand connection, and Daily Promotion Operator status. Researched exactly one new route after the 2026-10-26 deadlock gate: SkillPass.
+- **External adoption/distribution state change:** **none verified**. No published tester invitation, independent tester response, completed external A/B, or new external listing was established. Internal document updates must not be counted as growth.
+- **Fresh observations:** repo still **1 star / 1 fork**; most recent **main-branch commit 2026-10-26**, both commits were internal promotion-state maintenance. GitHub PR #1 remains **Codex-bot-only** with no human result. OpenAgentSkill #118 remains closed with five comments, last updated 2026-09-12, without a maintainer ownership-claim answer. Metricool brand 6751659 still reports **no social network connected**; prior post 379101947 had already failed authentication. This is infrastructure non-delivery, **not** failed market conversion. Daily Promotion Operator is **enabled**, last completed 2026-11-01.
+- **Independent-feedback check:** targeted Gmail search was attempted but the connected service required additional non-interactive user input/authorization. No email response status was established; do not claim inbox feedback is absent.
+- **One newly researched route:** **SkillPass** (https://skillpass.dev/docs/submitting) supports `/tree/main/<skill-folder>` from an owned monorepo and versioned validation; submit page https://skillpass.dev/submit requires account session, owner proof and interactive final publication. There was no authenticated non-interactive action available. Public dynamic search did **not** permit confirming whether Cartographer is already listed. **NOT SUBMITTED; NO LISTING CLAIMED.** Documented in references/DISTRIBUTION-ROUTES.md on 2026-11-02.
+- **Belief update:** Segment and value proposition remain **medium-low**. LinkedIn is still untested as an actual acquisition channel. SkillPass may provide technical discovery/validation but its relevance to professional long-form reviewers is unproven. No new product/README friction supports a Cartographer change.
+- **Fallback:** no independent authorized external route could be completed without site login, owner confirmation, social reconnection, or existing 403 permissions. Do not duplicate outreach, simulate installs, invent A/B results, or bypass these requirements.
+- **Previous meaningful external outcome:** OpenAgentSkill community listing with static-check feedback (September); this is a registry state, not usage evidence. Earlier 2026-10-26 internal maintenance corrected the route pool but did not yield adoption.
 
 ## Stopped tactics
 - Review-only runs and internal housekeeping treated as growth.
@@ -49,6 +51,7 @@ Obtain the first **qualified, independent** Socratic Story Cartographer Skill-vs
 3. SkillMD needs login; OpenAgentSkill ownership claim needs authenticated site session.
 4. TrustedSkills needs repo-topic/admin support and honest compatible metadata; do not tag the entire monorepo casually.
 5. ClawHub cannot use its web GitHub importer on this fork; CLI publishing requires authenticated ClawHub access and explicit acceptance of MIT-0 publishing terms. Do not request a token in chat or change the license without authorization.
+6. SkillPass publishing requires an authenticated account-owner session and interactive Publish confirmation after validating the canonical Cartographer subdirectory URL. No authorized non-interactive publisher is connected; do not report a listing before observing its actual public page.
 
 ## Next committed action
-Continue daily watch. If LinkedIn authentication recovers, verify a real connection, schedule the existing recruitment message **only once**, then verify actual PUBLICATION before starting a clean 48–72-hour response window. If independent tester feedback arrives first, handle it immediately. If an already known registry becomes executable, make one non-spam submission and verify it. Do not open another new discovery route before **2026-11-02** without material new evidence. No speculative Cartographer product/README changes, fake adoption signals, or self-installs.
+Continue daily watch. If LinkedIn authentication recovers, verify a real connection, schedule the existing recruitment message **only once**, then verify actual PUBLICATION before starting a clean 48–72-hour response window. If independent tester feedback arrives first, handle it immediately. If an already known registry becomes executable, make one non-spam submission and verify it. Do not open another new discovery route before **2026-11-09** without material new evidence. SkillPass was the sole newly researched route on 2026-11-02 and remains human-auth blocked. No speculative Cartographer product/README changes, fake adoption signals, or self-installs.
