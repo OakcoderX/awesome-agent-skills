@@ -1,0 +1,122 @@
+# First try: choose one small question
+
+[中文](FIRST-TRY.md) · [Installation and full guide](README.en.md)
+
+These are original fictional examples for learning how experimental version 0.1.0 works. They are not user outcomes, benchmark results, or evidence of effectiveness. You do not need a private manuscript or business document.
+
+## Before you start
+
+1. Choose a setup route: if installed, follow the [README](README.en.md) and confirm the actual SKILL.md path loaded. If not installed and your agent can read public files, use the session-only bootstrap below. Stop if the instructions are inaccessible rather than pretending the skill is active.
+2. Pick one example and write one sentence with your own initial judgment.
+3. Copy its whole text block into your agent. Afterwards, ask: which assumption became clearer, and what could we check next? Record no benefit honestly.
+
+A model's predicted effect is not an observed result.
+
+<details>
+<summary>See a short conversation first (fictional walkthrough)</summary>
+
+This stages [Example 1](https://github.com/OakcoderX/awesome-agent-skills/blob/socratic-reasoning-lab-v0.1/socratic-reasoning-lab/FIRST-TRY.en.md#example-1-you-cannot-name-the-problem-yet) as a short exchange, following the [0.1.0 instructions](https://github.com/OakcoderX/awesome-agent-skills/blob/17e1ed2f6e29db01ac0e87a0fb60f28fe3f74da2/socratic-reasoning-lab/SKILL.md) and [product adapter](https://github.com/OakcoderX/awesome-agent-skills/blob/17e1ed2f6e29db01ac0e87a0fb60f28fe3f74da2/socratic-reasoning-lab/references/product.md). It is a scripted illustration, not an actual model-run transcript or real-user result. Actual responses may differ.
+
+**User:** Another task ran late. Should we add reminders or redesign the board? Collaboration feels wrong, but I cannot explain why.
+
+**Agent (illustrative):** For the most recent late task, what happened between assigning it and the deadline?
+
+**Fictional facts supplied by the user:** The owner and date were clear on Monday. On Wednesday, the owner asked which of two acceptance criteria to follow. Both proposers replied without agreeing. The task was still undelivered on Friday.
+
+**Agent (illustrative):** First check whether conflicting acceptance criteria blocked this task. The record makes that worth investigating, but does not rule out a missed task or another cause. The smallest next check is to review Wednesday-to-Friday records for whether the criteria were resolved before the deadline; hold off on a board redesign. If they were resolved but the task was overlooked, investigate reminders instead. This advice concerns only this task. The check has not run.
+
+**What to record:** We have a question to verify, not evidence that the delay was solved. If you already saw this issue and gained no testable understanding or useful next step, record “no added benefit.” Question count and response length do not count as benefit.
+
+</details>
+
+## Try without installing
+
+If your agent has a reading tool that can retrieve complete public GitHub files, you can try this session-only route without Node.js, npm, or a local installation. Review the linked instructions first. If you want to use them, copy the bootstrap below; after the agent confirms the actual read, send the complete text block of any example below.
+
+This adds the public instructions to this conversation's context. It does not install a skill or establish automatic discovery. The links pin one 0.1.0 commit so a trial does not mix versions. If a required file cannot be read in full, stop and use the [complete installation route](README.en.md#install) instead. Opening a link or saying “enabled” is not proof of reading; check the reading tool's returned content and sources.
+
+```text
+Use the instructions from this public skill for this conversation only. Do not install anything or write files.
+
+First, use a reading tool to read the full SKILL.md:
+https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/SKILL.md
+
+If you cannot actually read the complete file, say which file is unavailable and stop. Do not reconstruct its instructions from the name, a search snippet, or memory.
+
+I will send one fictional example next. Before analyzing it, read only its required reference files in full:
+- Team task / signup-page example: https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/product.md
+- Shot-list example: https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/visual-design.md
+- Also read this for the numerical signup-page example, or if the skill requires an evidence-coverage check: https://raw.githubusercontent.com/OakcoderX/awesome-agent-skills/dfb56d65bc1a1b85c32ed8cae5d32920fa430a43/socratic-reasoning-lab/references/evidence-and-coverage.md
+
+Confirm the name and version found in the file and list the exact sources you actually read. Say this is session-only use, not an installation or automatic skill discovery. Wait for my example before analyzing. Do not run commands, publish, or contact people.
+```
+
+This route reads the public files above but needs no extra account. The fictional case itself needs no web research or external action. Cross-client compatibility and real-user outcomes remain untested.
+
+## Example 1: you cannot name the problem yet
+
+For a proposal that makes you hesitate before you can explain why.
+
+```text
+Use Socratic Reasoning Lab to help me understand this fictional case. Do not rewrite the entire proposal.
+
+We are building a team task tool. People say “collaboration is not working.” One person wants more reminders; another wants a redesigned board.
+The record of the latest late task says:
+- On Monday, the owner and due date were clear.
+- On Wednesday, the owner asked which of two acceptance criteria to follow.
+- The people who proposed the two criteria both replied, but did not resolve their disagreement.
+- On Friday, the task was not delivered.
+
+Something feels wrong with the proposal, but I cannot explain it yet. Which explanations would lead to different next steps?
+If information is missing, ask only the question most likely to change your advice.
+Give your current recommendation, evidence that could count against it, and the smallest next step. Stay under 180 words and do not contact anyone.
+```
+
+Check whether the response distinguishes reminders from resolving conflicting acceptance criteria. The record supports a limited judgment about this task, not a diagnosis of the whole team. Does it say what new evidence would change the advice, rather than immediately generating a feature backlog?
+
+## Example 2: motivation in a shot sequence
+
+For a sequence with shots in place but an unclear reason for the character's action.
+
+```text
+Use Socratic Reasoning Lab to review this fictional written shot list. No images or finished footage are supplied.
+
+Established story facts: a character returns to her empty former home before leaving permanently. She wants to leave the key but has not committed to doing so.
+The current sequence:
+1. Locked wide shot: she enters the empty room and stands by the door.
+2. Table close-up: a key is already on the table.
+3. The same wide shot: she immediately turns and leaves.
+
+The goal is for viewers to notice her hesitation about leaving the key, while preserving quiet restraint. Add no dialogue, music, or backstory.
+Could the problem be missing action, attention, or cut timing? Compare at least two explanations that imply different edits. Suggest only one minimal change and what it could weaken.
+Stay under 180 words. Do not claim to know how viewers actually respond.
+```
+
+Check whether the response separates the author's knowledge from what the supplied shots show. Suggestions about action, framing, or rhythm are proposals to test. A written shot list does not establish performance quality or audience response.
+
+## Example 3: a decision's hidden assumptions
+
+For a better-looking number that may not support the next commitment.
+
+```text
+Use Socratic Reasoning Lab to examine this fictional product decision.
+
+The team says a new signup page is better because signups rose from 40 to 60, and wants to roll it out:
+- The old page had 400 visitors and 40 signups in one week, all from organic search.
+- The new page had 1,200 visitors and 60 signups the next week; 800 visitors came from newly launched ads.
+- Each person is counted once, with the same signup definition.
+- Signups by traffic source, paid conversion, retention, and ad costs are unknown.
+
+What do these observations support, and what remains unresolved? Calculate both signup rates, identify the hidden assumption that matters most to rollout, and retain the strongest alternative explanation.
+Give the smallest next check and a result that would change your advice. Stay under 180 words. Do not buy ads or deploy the page.
+```
+
+Check for 10% and 5%, without attributing the decline directly to the page. The week and traffic mix also changed. Signup count, signup rate, and business value are different objectives. Do not demand false certainty from this evidence.
+
+## After trying it, record three things
+
+- Your initial view, and what changed or did not change
+- Which claim has support and which still needs checking
+- Whether you can name a useful next step
+
+If the response only grew longer, invented facts, or hid uncertainty, this trial did not achieve its purpose. The [feedback template](PROMOTION.md#feedback-template) can help; remove private information before posting. One useful answer does not establish broad superiority. Keep failures too.

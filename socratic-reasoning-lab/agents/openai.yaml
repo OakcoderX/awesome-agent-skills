@@ -1,0 +1,4 @@
+interface:
+  display_name: "Socratic Reasoning Lab"
+  short_description: "Test assumptions with domain-aware evidence and bounded trials"
+  default_prompt: "Use $socratic-reasoning-lab to examine the highest-leverage uncertainty in this proposal and suggest a bounded next test."
