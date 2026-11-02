@@ -265,6 +265,25 @@ Verified blockers on 2026-10-26:
 
 Minimal legitimate handoff if ever selected: the owner signs into ClawHub and, after reviewing licensing terms, publishes only the local socratic-story-cartographer/ folder with the official CLI. Do not paste tokens into chat or create automatic self-installs to boost metrics. No further new-route research before **2026-11-02** unless materially new evidence arises.
 
+## 13. SkillPass (single new route researched 2026-11-02)
+
+Website: https://skillpass.dev/
+Official submission guide: https://skillpass.dev/docs/submitting
+Submit page: https://skillpass.dev/submit
+
+Verified 2026-11-02:
+- The documentation explicitly supports a `/tree/main/<skill-folder>` link to publish **one subdirectory from a larger GitHub repository**, rather than only a repository-wide bundle.
+- The source must be the submitter's own repository (or an eligible organization repository). Our GitHub account owns `OakcoderX/awesome-agent-skills`; this makes the ownership rule plausibly satisfiable, but GitHub OAuth identity on SkillPass was **not** established.
+- Submission requires a SkillPass account session and an interactive **Publish** confirmation after pinning, snapshotting, and validation. The public submit page displayed `Checking session...`; no authorized non-interactive submission action/tool was available.
+- The directory renders results dynamically; this run did **not** establish whether Cartographer is already indexed. Do not claim a verified absence, submission, or listing.
+- SkillPass is a technical Agent Skill discovery/validation audience, not yet a validated route to professional long-form story reviewers. Expected segment relevance remains unproven.
+
+Execution status: **RESEARCHED / NOT SUBMITTED**. No paid browser workaround, login bypass, or duplicate listing attempt was made.
+
+Minimal human handoff if selected later: sign in at https://skillpass.dev/submit with the GitHub account owning the repository, paste `https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer`, review validation/ownership and explicitly confirm publication. Verify a public listing URL afterward. Do not infer that a submitted form has been published.
+
+Deadlock exploration gate: do not research a different new route before **2026-11-09** unless material external evidence changes the plan.
+
 ## Earlier deadlock-escape routes (already researched, not new this week)
 
 - **Skillboard**: https://www.skillboard.lol/submit ; accepts skill subdirectory URL but needs an interactive form. Prior browser automation wallet insufficient.
