@@ -12,7 +12,7 @@ This original fictional sample is provided for practice under this repository's 
 
 ## English: copy this prompt
 
-Install and confirm the skill first using the [English guide](./README.en.md). Then copy:
+First confirm the installed skill using the [English guide](./README.en.md), or complete the [conversation-only, no-install setup](./FIRST-TEST.md#no-install-option). Then copy:
 
 ```text
 Run Socratic Story Cartographer on the scene below for up to 3 loops.
@@ -45,7 +45,7 @@ Lena sat beside him. Neither spoke.
 
 ## 中文：复制这段提问
 
-先按[中文入门](./README.zh.md)安装并确认技能可用，再复制：
+先按[中文入门](./README.zh.md)安装并确认技能可用，或完成[仅限本次对话的免安装准备](./FIRST-TEST.zh.md#免安装试用)，再复制：
 
 ```text
 用 Socratic Story Cartographer 诊断下面的场景，最多 3 轮，用中文回答。
