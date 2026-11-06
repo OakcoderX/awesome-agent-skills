@@ -1,3 +1,15 @@
+# Socratic Story Cartographer · 苏格拉底式故事诊断
+
+A story-review skill for novels, screenplays, scenes, and series outlines. Test competing explanations, check the text, and find the smallest useful revision.
+
+用于小说、剧本、场景和剧集大纲的叙事诊断：先检验不同解释，再决定最值得改的一处。
+
+[English quick start](./socratic-story-cartographer/README.en.md) · [中文入门](./socratic-story-cartographer/README.zh.md) · [Try a bilingual example / 中英示例](./socratic-story-cartographer/DEMO.md) · [Skill specification](./socratic-story-cartographer/SKILL.md)
+
+This fork also retains the upstream Awesome Agent Skills directory below. Its upstream badges, sponsors, and collection-wide claims describe that directory, not adoption or endorsement of Socratic Story Cartographer.
+
+---
+
 <a href="https://github.com/VoltAgent/voltagent">
      <img width="1500" alt="claude-skills" src="https://github.com/user-attachments/assets/0db54cfc-f3dd-4683-abbb-e4c01d9dfb5d" />
 </a>

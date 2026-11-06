@@ -1,5 +1,40 @@
 # Socratic Story Cartographer
 
+[中文](./README.zh.md) · [Sample scene](./DEMO.md) · [First test](./FIRST-TEST.md)
+
+**Before rewriting your story, test what is actually causing the problem.**
+
+Socratic Story Cartographer checks competing diagnoses against the text, looks for evidence against its first answer, and recommends a small next revision while protecting what already works.
+
+## Start here
+
+1. Install the skill in an agent that supports Agent Skills:
+   ```bash
+   npx skills add https://github.com/OakcoderX/awesome-agent-skills/tree/main/socratic-story-cartographer
+   ```
+2. Ask the agent to confirm that `socratic-story-cartographer` is available. Installation and model behavior depend on your agent; the project does not claim every environment has been tested.
+3. Provide a scene you have permission to use, or copy the [complete bilingual example](./DEMO.md), then paste:
+
+   ```text
+   Run Socratic Story Cartographer on this scene for up to 3 loops.
+   Do not rewrite yet. Find the single most useful revision target.
+   Cite the text, test a competing explanation, and explain what your
+   suggested fix could damage. Stop if another loop adds no new evidence.
+   ```
+
+The [Skills CLI documentation](https://github.com/vercel-labs/skills#install-a-skill) describes the installation command. You still need a compatible agent and access to its model; this repository is an instruction package, not a hosted writing app.
+
+## What to look for
+
+- A diagnosis you can check against specific passages
+- A competing explanation that would lead to a different edit
+- A change in the diagnosis when contrary evidence appears
+- One useful next step, including leaving the text unchanged when appropriate
+
+For long or multi-file work, use the [Skill-vs-strong-prompt A/B protocol](./AB-TEST.md). The sample scene is only a first-use check, not proof of long-work performance.
+
+[Share a result or failure in the existing feedback thread](https://github.com/OakcoderX/awesome-agent-skills/pull/1). Model/agent, input scope, and one concrete observation are enough for an initial report. Omit private manuscript text and personal information; praise is not required.
+
 ## Overview
 
 A creator-oriented narrative diagnostic skill that uses Socratic questioning to support first-pass reading of fiction.
